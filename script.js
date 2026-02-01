@@ -187,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    
 
     // --- 5. SMOOTH SCROLL ANCHORS ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -208,5 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    
 
 });
+

@@ -10,6 +10,8 @@
     <meta name="theme-color" content="#0a0a0a">
     <meta name="description" content="Portfolio of Asit Kumar, Backend Developer specializing in Node.js and scalable architectures.">
 </head>
+
+
 <body>
 
     <!-- Ambient Background -->
@@ -23,7 +25,8 @@
     <!-- Navigation -->
     <header class="navbar glass-panel">
         <div class="container navbar-container">
-            <a href="#home" class="logo">AK</a>
+<a href="#home" class="logo slide">A <span>|</span> K</a>
+
             <nav class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link active">Home</a></li>
@@ -45,10 +48,14 @@
         <!-- Hero Section -->
         <section id="home" class="hero section">
             <div class="container hero-container">
-                <div class="hero-content reveal-text">
-                    <h1 class="hero-headline">Building Scalable Backend <br> <span class="gradient-text">Architectures.</span></h1>
-                    <p class="hero-subheading">Software Engineer specializing in Node.js, REST APIs, and clean code.</p>
-                    <div class="hero-cta">
+                <div class="hero-content">
+                    <!-- Headline with word-by-word reveal animation -->
+                    <h1 class="hero-headline" data-animate-words>
+                        Building Scalable Backend Architectures.
+                    </h1>
+                    <!-- Subheading fades in after headline animation completes -->
+                    <p class="hero-subheading" data-animate-delay>Software Engineer specializing in Node.js, REST APIs, and clean code.</p>
+                    <div class="hero-cta" data-animate-delay>
                         <a href="#projects" class="btn btn-primary glass-btn">View My Work</a>
                         <a href="https://1drv.ms/w/c/6af36ed1a1eaddca/IQCp_QEAxSYpRIViQ5TBLmTeASc_uf5PZQbCvWcQ1nl79sI" target="_blank" class="btn btn-secondary glass-btn-outline">Resume</a>
                     </div>
@@ -224,6 +231,24 @@
                             </div>
                         </div>
                     </article>
+                                        <article class="project-card tilt-wrapper" data-tilt>
+                        <div class="glass-card project-inner">
+                            <div class="tilt-content">
+                                <div class="project-header">
+                                    <h3>EchoSphere – Real-Time Chat</h3>
+                                    <a href="https://www.techinc.app" target="_blank" class="icon-link" aria-label="GitHub">Live</a>
+                                </div>
+                                
+                        <p class="project-desc">A real-time chat application with seamless cross-device communication and secure Google/GitHub OAuth.</p>
+                                <div class="tech-stack">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>Socket.io</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
                     <!-- Project 3 -->
                     <article class="project-card tilt-wrapper" data-tilt>
@@ -242,22 +267,8 @@
                             </div>
                         </div>
                     </article>
+                                        <!-- Project 3 -->
 
-                <article class="project-card fade-in">
-                    <div class="project-content">
-                        <h3 class="project-title">EchoSphere – Real-Time Chat</h3>
-                        <p class="project-desc">A real-time chat application with seamless cross-device communication and secure Google/GitHub OAuth.</p>
-                        <ul class="project-stack">
-                            <li>React</li>
-                            <li>Node.js</li>
-                            <li>Socket.io</li>
-                            <li>MongoDB</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/Asit-14" class="project-link" target="_blank">GitHub</a>
-                            <a href="#" class="project-link">Live Demo</a>
-                        </div>
-                    </article>
 
                 </div>
             </div>
@@ -267,7 +278,7 @@
         <section id="contact" class="section footer-section">
             <div class="container content-center">
                 <h2 class="gradient-text reveal-text">Let's Connect</h2>
-                <p class="contact-sub reveal-up">Open to backend development opportunities.</p>
+                <p class="contact-sub reveal-up">Open to backend development or Full stack development opportunities.</p>
                 
                 <div class="contact-actions reveal-up">
                     <a href="mailto:asitshakya789@gmail.com" class="btn btn-primary glass-btn">Email Me</a>
@@ -285,5 +296,81 @@
     </main>
     
     <script src="script.js"></script>
+
+    <!-- Hero Animation: Word-by-word reveal with blur transition -->
+    <script>
+    (function() {
+        'use strict';
+
+        /**
+         * Hero Headline Animation
+         * Creates a cinematic word-by-word reveal effect
+         * - Each word enters from below with opacity and blur transition
+         * - Staggered timing creates a sequential, intentional feel
+         * - No bounce/overshoot - uses smooth ease-out curve
+         */
+        
+        const ANIMATION_CONFIG = {
+            wordDelay: 100,      // ms between each word
+            wordDuration: 600,   // ms for each word animation
+            subheadingDelay: 200 // ms after last word before subheading appears
+        };
+
+        function initHeroAnimation() {
+            const headline = document.querySelector('[data-animate-words]');
+            if (!headline) return;
+
+            // Get the raw text content, preserving the original text
+            const text = headline.textContent.trim();
+            const words = text.split(/\s+/);
+
+            // Clear and rebuild with spans for each word
+            headline.innerHTML = '';
+            headline.classList.add('hero-animate-ready');
+
+            words.forEach((word, index) => {
+                const wordSpan = document.createElement('span');
+                wordSpan.className = 'hero-word';
+                wordSpan.textContent = word;
+                
+                // Calculate staggered delay for each word
+                const delay = index * ANIMATION_CONFIG.wordDelay;
+                wordSpan.style.animationDelay = `${delay}ms`;
+
+                headline.appendChild(wordSpan);
+
+                // Add space between words (except last)
+                if (index < words.length - 1) {
+                    headline.appendChild(document.createTextNode(' '));
+                }
+            });
+
+            // Calculate when headline animation finishes
+            const totalHeadlineTime = 
+                (words.length - 1) * ANIMATION_CONFIG.wordDelay + 
+                ANIMATION_CONFIG.wordDuration;
+
+            // Animate delayed elements (subheading, CTA) after headline
+            const delayedElements = document.querySelectorAll('[data-animate-delay]');
+            delayedElements.forEach((el, i) => {
+                const elementDelay = totalHeadlineTime + ANIMATION_CONFIG.subheadingDelay + (i * 100);
+                el.style.animationDelay = `${elementDelay}ms`;
+                el.classList.add('hero-fade-in');
+            });
+
+            // Trigger animation on next frame to ensure CSS is applied
+            requestAnimationFrame(() => {
+                headline.classList.add('hero-animate-active');
+            });
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initHeroAnimation);
+        } else {
+            initHeroAnimation();
+        }
+    })();
+    </script>
 </body>
 </html>
