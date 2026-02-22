@@ -1,409 +1,712 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basics -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Asit Kumar — Backend Engineer</title>
-  <meta name="description" content="Asit Kumar — Software Engineer specializing in scalable backend systems, Node.js, REST APIs, and clean architecture." />
-
-  <!-- Theme & UX polish -->
-  <meta name="theme-color" content="#0a0a0a" />
-  <meta name="color-scheme" content="dark light" />
+  <title>Asit Kumar — Backend Engineer | Portfolio</title>
+  <meta name="description" content="Asit Kumar — Software Engineer specializing in scalable backend systems, Node.js, REST APIs, and clean architecture. Explore my projects, skills, and experience." />
+  <meta name="keywords" content="Asit Kumar, Backend Engineer, Node.js, REST APIs, Portfolio, Software Engineer, Full Stack Developer" />
+  <meta name="theme-color" content="#E4B363" />
+  <meta name="color-scheme" content="light" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-<!-- Favicon system -->
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/faviconlogo.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/faviconlogo.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/faviconlogo.png" />
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/faviconlogo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/faviconlogo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/faviconlogo.png" />
 
-  <!-- SEO / Identity -->
+  <!-- SEO -->
   <link rel="canonical" href="https://techasit.dev" />
   <meta name="author" content="Asit Kumar" />
+  <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Asit Kumar — Backend Engineer" />
   <meta property="og:description" content="Building scalable backend architectures with Node.js and clean system design." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://techasit.dev" />
-  <meta property="og:image" content="https://techasit.dev/og-image.png" />
+  <meta property="og:image" content="https://techasit.dev/assets/hero-image.png" />
+  <meta property="og:site_name" content="Asit Kumar Portfolio" />
 
-  <!-- Twitter/X -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Asit Kumar — Backend Engineer" />
   <meta name="twitter:description" content="Scalable backend systems, APIs, and architecture." />
-  <meta name="twitter:image" content="https://techasit.dev/og-image.png" />
+  <meta name="twitter:image" content="https://techasit.dev/assets/hero-image.png" />
 
-  <!-- Fonts (example – keep minimal) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
 </head>
-
-
 <body>
 
-    <!-- Ambient Background -->
-    <div class="ambient-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-        <div class="noise-overlay"></div>
+  <!-- Page Loader -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-spinner">
+        <svg viewBox="0 0 50 50" class="loader-svg">
+          <circle cx="25" cy="25" r="20" fill="none" stroke="#E4B363" stroke-width="3" stroke-linecap="round" stroke-dasharray="90 150" stroke-dashoffset="0">
+            <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      </div>
+      <p class="loader-text">Initializing</p>
     </div>
+  </div>
 
-    <!-- Navigation -->
-    <header class="navbar glass-panel">
-        <div class="container navbar-container">
-<a href="#home" class="logo slide">A <span>|</span> K</a>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress"></div>
 
-            <nav class="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#education" class="nav-link">Education</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#projects" class="nav-link">Work</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="navbar-inner">
+      <!-- Left: Brand -->
+      <div class="nav-brand">
+        <a href="#home" class="nav-logo" aria-label="Asit Kumar — Home">
+          <span class="logo-text">Asit<span class="logo-accent">.</span>Kumar</span>
+          <span class="status-indicator" title="System Online" aria-hidden="true">
+            <span class="status-dot"></span>
+          </span>
+        </a>
+      </div>
+      <!-- Center: Links (Desktop) -->
+      <nav class="nav-center" id="nav-menu" role="navigation" aria-label="Main navigation">
+        <ul class="nav-links" role="menubar">
+          <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+          <li role="none"><a href="#architecture" class="nav-link" role="menuitem">Architecture</a></li>
+          <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+          <li role="none"><a href="api-playground.html" class="nav-link" role="menuitem">Playground</a></li>
+          <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Right: CTA + Hamburger -->
+      <div class="nav-end">
+        <a href="#contact" class="btn-build" aria-label="Get in touch">
+          <span class="btn-build-pulse" aria-hidden="true"></span>
+          Let's Build
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Dropdown Panel -->
+    <div class="mobile-panel" id="mobile-panel" aria-hidden="true">
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <ul class="mobile-links">
+          <li><a href="#home" class="mobile-link">Home</a></li>
+          <li><a href="#architecture" class="mobile-link">Architecture</a></li>
+          <li><a href="#projects" class="mobile-link">Projects</a></li>
+          <li><a href="api-playground.html" class="mobile-link">Playground</a></li>
+          <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="mobile-cta">Let's Build Together</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-greeting hero-reveal">Hello, I'm</p>
+          <h1 class="hero-name">Asit Kumar</h1>
+          <p class="hero-role hero-reveal">Backend Engineer | System Thinker</p>
+          <p class="hero-desc hero-reveal">I design and build scalable backend architectures with clean code, secure APIs, and thoughtful system design.</p>
+          <div class="hero-cta-group hero-reveal">
+            <a href="#architecture" class="btn-hero-primary">Explore Architecture</a>
+            <a href="#projects" class="btn-hero-outline">View Projects</a>
+          </div>
         </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <!-- Headline with word-by-word reveal animation -->
-                    <h1 class="hero-headline" data-animate-words>
-                        Building Scalable Backend Architectures.
-                    </h1>
-                    <!-- Subheading fades in after headline animation completes -->
-                    <p class="hero-subheading" data-animate-delay>Software Engineer specializing in Node.js, REST APIs, and clean code.</p>
-                    <div class="hero-cta" data-animate-delay>
-                        <a href="#projects" class="btn btn-primary glass-btn">View My Work</a>
-                        <a href="https://1drv.ms/w/c/6af36ed1a1eaddca/IQCp_QEAxSYpRIViQ5TBLmTeASc_uf5PZQbCvWcQ1nl79sI" target="_blank" class="btn btn-secondary glass-btn-outline">Resume</a>
-                    </div>
-                </div>
-                
-                <div class="hero-visual tilt-wrapper" data-tilt>
-                    <div class="tilt-card glass-card-solid">
-                        <div class="tilt-content">
-                            <img src="assets/hero-image.png" alt="Asit Kumar" class="hero-img">
-                        </div>
-                    </div>
-                </div>
+        <div class="hero-visual">
+          <!-- Mini Architecture Diagram -->
+          <div class="hero-diagram">
+            <div class="diagram-node">
+              <div class="diagram-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              </div>
+              <div class="diagram-node-info">
+                <span class="diagram-node-label">API Gateway</span>
+                <span class="diagram-node-tech">Express.js / REST</span>
+              </div>
             </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section about">
-            <div class="container">
-                <h2 class="section-title reveal-text">About Me</h2>
-                <div class="glass-container reveal-up">
-                    <div class="about-grid">
-                        <div class="about-text">
-                            <p>I am a final-year B.Tech Computer Science student at <strong>Dr. A.P.J. Abdul Kalam Technical University</strong>. My focus is on Data Structures, Algorithms, and Software Engineering.</p>
-                            <p>Currently working as a <strong>Backend Developer Intern</strong>, I specialize in building secure and scalable APIs using Node.js and Express. I bridge the gap between complex backend logic and seamless frontend integration.</p>
-                        </div>
-                        
-                        <!-- Education Integrated here -->
-                        <div class="education-mini" id="education">
-                            <h3>Education</h3>
-                            <div class="edu-item">
-                                <span class="year">2026 (Exp)</span>
-                                <h4>B.Tech in CSE</h4>
-                                <p>Dr. A.P.J. Abdul Kalam Technical University</p>
-                                <small>CGPA: 7.5/10</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="diagram-connector"><span class="pulse-dot"></span></div>
+            <div class="diagram-node">
+              <div class="diagram-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="diagram-node-info">
+                <span class="diagram-node-label">Service Layer</span>
+                <span class="diagram-node-tech">Business Logic</span>
+              </div>
             </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title reveal-text">Experience</h2>
-                <div class="timeline">
-                    <!-- Experience Item 1 -->
-                    <div class="timeline-item reveal-up tilt-wrapper-small" data-tilt>
-                        <div class="timeline-card glass-card">
-                            <div class="tilt-content">
-                                <div class="timeline-header">
-                                    <h3>Backend Developer Intern</h3>
-                                    <span class="timeline-date">Jan 2026 – Present</span>
-                                </div>
-                                <div class="timeline-subheader">Webapphealing Technology Pvt Ltd, Noida</div>
-                                <ul class="timeline-list">
-                                    <li>Handled backend development and integrated REST APIs using Node.js.</li>
-                                    <li>Debugged API issues and optimized backend logic.</li>
-                                    <li>Used Postman and Git for testing and collaboration.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Experience Item 2 -->
-                    <div class="timeline-item reveal-up tilt-wrapper-small" data-tilt>
-                        <div class="timeline-card glass-card">
-                            <div class="tilt-content">
-                                <div class="timeline-header">
-                                    <h3>Software Intern</h3>
-                                    <span class="timeline-date">Sep 2025 – Dec 2025</span>
-                                </div>
-                                <div class="timeline-subheader">Planetcast Media Services Limited, Noida</div>
-                                <ul class="timeline-list">
-                                    <li>Developed and maintained backend logic for internal software modules.</li>
-                                    <li>Resolved software defects through debugging.</li>
-                                    <li>Collaborated with cross-functional teams on system architecture.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="diagram-connector"><span class="pulse-dot"></span></div>
+            <div class="diagram-node">
+              <div class="diagram-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <div class="diagram-node-info">
+                <span class="diagram-node-label">Database</span>
+                <span class="diagram-node-tech">MongoDB / MySQL</span>
+              </div>
             </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title reveal-text">Competencies</h2>
-                <div class="skills-wrapper">
-                    <div class="skill-category glass-card reveal-up tilt-wrapper-small" data-tilt>
-                        <div class="tilt-content">
-                            <h3>Backend Core</h3>
-                            <div class="skill-tags">
-                                <span>Node.js</span>
-                                <span>Express.js</span>
-                                <span>REST APIs</span>
-                                <span>Java</span>
-                                <span>Python</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category glass-card reveal-up tilt-wrapper-small delay-100" data-tilt>
-                        <div class="tilt-content">
-                            <h3>Data & Tools</h3>
-                            <div class="skill-tags">
-                                <span>MongoDB</span>
-                                <span>MySQL</span>
-                                <span>SQL</span>
-                                <span>Git & GitHub</span>
-                                <span>Postman</span>
-                                <span>Linux CLI</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <!-- Typing Terminal -->
+          <div class="hero-terminal">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">backend.js</span>
             </div>
-        </section>
-
-        <!-- Achievements Mini Section -->
-        <section id="achievements" class="section">
-            <div class="container">
-                <div class="achievement-banner glass-panel reveal-up tilt-wrapper-small" data-tilt>
-                    <div class="tilt-content achievement-content">
-                        <h3>Ninja Slayground 2.0</h3>
-                        <p>Completed 21-Day Coding Challenge by Coding Ninjas.</p>
-                        <a href="https://github.com/Asit-14/NINJA-SLAYGROUND-2.0" target="_blank" class="text-link">View Problems ↗</a>
-                    </div>
-                </div>
+            <div class="terminal-body">
+              <span class="terminal-prompt">$ </span><span class="terminal-text" id="typing-text"></span><span class="terminal-cursor"></span>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title reveal-text">Selected Work</h2>
-                <div class="projects-grid">
-                    
-                    <!-- Project 1 -->
-                    <article class="project-card tilt-wrapper" data-tilt>
-                        <div class="glass-card project-inner">
-                            <div class="tilt-content">
-                                <div class="project-header">
-                                    <h3>Task & Project System</h3>
-                                    <span class="status-badge">Ongoing</span>
-                                </div>
-                                <p class="project-desc">Secure, scalable backend-focused web app with JWT authentication, RBAC, and clean modular architecture.</p>
-                                <div class="tech-stack">
-                                    <span>Node.js</span>
-                                    <span>Express</span>
-                                    <span>MongoDB</span>
-                                    <span>JWT</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 2 -->
-                    <article class="project-card tilt-wrapper" data-tilt>
-                        <div class="glass-card project-inner">
-                            <div class="tilt-content">
-                                <div class="project-header">
-                                    <h3>Smart Internship Recommender</h3>
-                                    <a href="https://github.com/Asit-14/Smart-Internship-Recommender" target="_blank" class="icon-link" aria-label="GitHub">GH</a>
-                                </div>
-                                <p class="project-desc">Government-backed AI platform. Personalized ML algorithms, explainable AI, support for 13 Indian languages.</p>
-                                <div class="tech-stack">
-                                    <span>Python</span>
-                                    <span>ML</span>
-                                    <span>NLP</span>
-                                    <span>Flask</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                                        <article class="project-card tilt-wrapper" data-tilt>
-                        <div class="glass-card project-inner">
-                            <div class="tilt-content">
-                                <div class="project-header">
-                                    <h3>EchoSphere – Real-Time Chat</h3>
-                                    <a href="https://www.techinc.app" target="_blank" class="icon-link" aria-label="GitHub">Live</a>
-                                </div>
-                                
-                        <p class="project-desc">A real-time chat application with seamless cross-device communication and secure Google/GitHub OAuth.</p>
-                                <div class="tech-stack">
-                                    <span>React</span>
-                                    <span>Node.js</span>
-                                    <span>Socket.io</span>
-                                    <span>MongoDB</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3 -->
-                    <article class="project-card tilt-wrapper" data-tilt>
-                        <div class="glass-card project-inner">
-                            <div class="tilt-content">
-                                <div class="project-header">
-                                    <h3>Face Recognition System</h3>
-                                    <a href="https://github.com/Asit-14/Face-Recognition-project" target="_blank" class="icon-link" aria-label="GitHub">GH</a>
-                                </div>
-                                <p class="project-desc">Real-time biometric system built with OpenCV and dlib. Detects and matches faces from live webcam feeds.</p>
-                                <div class="tech-stack">
-                                    <span>Python</span>
-                                    <span>OpenCV</span>
-                                    <span>dlib</span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                                        <!-- Project 3 -->
-
-
-                </div>
+    <!-- How I Engineer Systems Section -->
+    <section id="engineering" class="section">
+      <div class="container">
+        <h2 class="section-label reveal-up">Process</h2>
+        <h3 class="section-title reveal-up">How I Engineer Systems</h3>
+        <p class="section-desc reveal-up">Every backend system I build follows a structured approach from requirements to deployment.</p>
+        <div class="engineering-grid">
+          <div class="eng-card reveal-up" data-step="01">
+            <div class="eng-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section footer-section">
-            <div class="container content-center">
-                <h2 class="gradient-text reveal-text">Let's Connect</h2>
-                <p class="contact-sub reveal-up">Open to backend development or Full stack development opportunities.</p>
-                
-                <div class="contact-actions reveal-up">
-                    <a href="mailto:asitshakya789@gmail.com" class="btn btn-primary glass-btn">Email Me</a>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/asit14" target="_blank" class="social-icon">LinkedIn</a>
-                        <a href="https://github.com/Asit-14" target="_blank" class="social-icon">GitHub</a>
-                    </div>
-                </div>
-                
-                <footer class="actual-footer">
-                    <p>&copy; 2026 Asit Kumar.</p>
-                </footer>
+            <h4>Requirement Breakdown</h4>
+            <p>Analyzing business requirements, defining API contracts, and mapping data flows before writing any code.</p>
+          </div>
+          <div class="eng-card reveal-up delay-50" data-step="02">
+            <div class="eng-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
             </div>
-        </section>
-    </main>
-    
-    <script src="script.js"></script>
+            <h4>Database Modeling</h4>
+            <p>Designing normalized schemas, defining relationships, indexing strategies, and planning for data integrity.</p>
+          </div>
+          <div class="eng-card reveal-up delay-100" data-step="03">
+            <div class="eng-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <h4>Secure API Design</h4>
+            <p>Implementing JWT authentication, role-based access control, input validation, and rate limiting.</p>
+          </div>
+          <div class="eng-card reveal-up" data-step="04">
+            <div class="eng-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h4>Error Handling Strategy</h4>
+            <p>Centralized error middleware, structured error responses, logging, and graceful failure recovery.</p>
+          </div>
+          <div class="eng-card reveal-up delay-50" data-step="05">
+            <div class="eng-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h4>Performance Tuning</h4>
+            <p>Query optimization, caching strategies, connection pooling, and efficient data serialization.</p>
+          </div>
+          <div class="eng-card reveal-up delay-100" data-step="06">
+            <div class="eng-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+            </div>
+            <h4>Deployment Strategy</h4>
+            <p>CI/CD pipelines, environment configuration, monitoring setup, and production-ready deployments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Hero Animation: Word-by-word reveal with blur transition -->
-    <script>
-    (function() {
-        'use strict';
+    <!-- Architecture Section -->
+    <section id="architecture" class="section section-cream">
+      <div class="container">
+        <h2 class="section-label reveal-up">System Design</h2>
+        <h3 class="section-title reveal-up">Architecture Overview</h3>
+        <p class="section-desc reveal-up">A visual representation of how I structure backend services.</p>
 
-        /**
-         * Hero Headline Animation
-         * Creates a cinematic word-by-word reveal effect
-         * - Each word enters from below with opacity and blur transition
-         * - Staggered timing creates a sequential, intentional feel
-         * - No bounce/overshoot - uses smooth ease-out curve
-         */
-        
-        const ANIMATION_CONFIG = {
-            wordDelay: 100,      // ms between each word
-            wordDuration: 600,   // ms for each word animation
-            subheadingDelay: 200 // ms after last word before subheading appears
-        };
+        <div class="architecture-wrapper reveal-up">
+          <div class="arch-diagram" id="arch-diagram">
+            <!-- Request Flow Line -->
+            <svg class="arch-flow-svg" id="arch-flow-svg" aria-hidden="true"></svg>
 
-        function initHeroAnimation() {
-            const headline = document.querySelector('[data-animate-words]');
-            if (!headline) return;
+            <!-- Nodes -->
+            <div class="arch-node" data-node="client" data-connects="api">
+              <div class="arch-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <span class="arch-node-label">Client</span>
+              <span class="arch-node-tech">Browser / Mobile</span>
+            </div>
 
-            // Get the raw text content, preserving the original text
-            const text = headline.textContent.trim();
-            const words = text.split(/\s+/);
+            <div class="arch-node" data-node="api" data-connects="auth,service">
+              <div class="arch-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              </div>
+              <span class="arch-node-label">API Layer</span>
+              <span class="arch-node-tech">Express.js / REST</span>
+            </div>
 
-            // Clear and rebuild with spans for each word
-            headline.innerHTML = '';
-            headline.classList.add('hero-animate-ready');
+            <div class="arch-node" data-node="auth" data-connects="service">
+              <div class="arch-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              </div>
+              <span class="arch-node-label">Auth Module</span>
+              <span class="arch-node-tech">JWT / RBAC</span>
+            </div>
 
-            words.forEach((word, index) => {
-                const wordSpan = document.createElement('span');
-                wordSpan.className = 'hero-word';
-                wordSpan.textContent = word;
-                
-                // Calculate staggered delay for each word
-                const delay = index * ANIMATION_CONFIG.wordDelay;
-                wordSpan.style.animationDelay = `${delay}ms`;
+            <div class="arch-node" data-node="service" data-connects="database,cache,logger">
+              <div class="arch-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <span class="arch-node-label">Service Layer</span>
+              <span class="arch-node-tech">Business Logic</span>
+            </div>
 
-                headline.appendChild(wordSpan);
+            <div class="arch-node" data-node="database">
+              <div class="arch-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <span class="arch-node-label">Database</span>
+              <span class="arch-node-tech">MongoDB / MySQL</span>
+            </div>
 
-                // Add space between words (except last)
-                if (index < words.length - 1) {
-                    headline.appendChild(document.createTextNode(' '));
-                }
-            });
+            <div class="arch-node" data-node="cache">
+              <div class="arch-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <span class="arch-node-label">Cache</span>
+              <span class="arch-node-tech">In-Memory</span>
+            </div>
 
-            // Calculate when headline animation finishes
-            const totalHeadlineTime = 
-                (words.length - 1) * ANIMATION_CONFIG.wordDelay + 
-                ANIMATION_CONFIG.wordDuration;
+            <div class="arch-node" data-node="logger">
+              <div class="arch-node-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <span class="arch-node-label">Logger</span>
+              <span class="arch-node-tech">Winston / Logs</span>
+            </div>
+          </div>
+        </div>
 
-            // Animate delayed elements (subheading, CTA) after headline
-            const delayedElements = document.querySelectorAll('[data-animate-delay]');
-            delayedElements.forEach((el, i) => {
-                const elementDelay = totalHeadlineTime + ANIMATION_CONFIG.subheadingDelay + (i * 100);
-                el.style.animationDelay = `${elementDelay}ms`;
-                el.classList.add('hero-fade-in');
-            });
+        <!-- Backend Metrics Dashboard -->
+        <div class="metrics-dashboard reveal-up">
+          <h4 class="metrics-title">Live System Metrics <span class="metrics-badge">Simulated</span></h4>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-label">Requests / min</span>
+                <span class="metric-card-status status-green"></span>
+              </div>
+              <span class="metric-card-value" id="metric-rpm">142</span>
+              <div class="metric-bar">
+                <div class="metric-bar-fill" id="metric-rpm-bar" style="width: 71%"></div>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-label">Avg Latency</span>
+                <span class="metric-card-status status-green"></span>
+              </div>
+              <span class="metric-card-value" id="metric-latency">23<small>ms</small></span>
+              <div class="metric-bar">
+                <div class="metric-bar-fill" id="metric-latency-bar" style="width: 23%"></div>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-label">Error Rate</span>
+                <span class="metric-card-status status-green"></span>
+              </div>
+              <span class="metric-card-value" id="metric-errors">0.3<small>%</small></span>
+              <div class="metric-bar">
+                <div class="metric-bar-fill metric-bar-error" id="metric-errors-bar" style="width: 3%"></div>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-header">
+                <span class="metric-card-label">System Health</span>
+                <span class="metric-card-status status-green"></span>
+              </div>
+              <span class="metric-card-value metric-health" id="metric-health">Operational</span>
+              <div class="metric-bar">
+                <div class="metric-bar-fill metric-bar-health" id="metric-health-bar" style="width: 98%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            // Trigger animation on next frame to ensure CSS is applied
-            requestAnimationFrame(() => {
-                headline.classList.add('hero-animate-active');
-            });
-        }
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-label reveal-up">Career</h2>
+        <h3 class="section-title reveal-up">Experience</h3>
+        <div class="experience-grid">
+          <div class="exp-card reveal-up">
+            <div class="exp-header">
+              <div>
+                <h4>Backend Developer Intern</h4>
+                <p class="exp-company">Webapphealing Technology Pvt Ltd, Noida</p>
+              </div>
+              <span class="exp-date">Jan 2026 - Present</span>
+            </div>
+            <ul class="exp-list">
+              <li>Handled backend development and integrated REST APIs using Node.js.</li>
+              <li>Debugged API issues and optimized backend logic.</li>
+              <li>Used Postman and Git for testing and collaboration.</li>
+            </ul>
+          </div>
+          <div class="exp-card reveal-up delay-100">
+            <div class="exp-header">
+              <div>
+                <h4>Software Intern</h4>
+                <p class="exp-company">Planetcast Media Services Limited, Noida</p>
+              </div>
+              <span class="exp-date">Sep 2025 - Dec 2025</span>
+            </div>
+            <ul class="exp-list">
+              <li>Developed and maintained backend logic for internal software modules.</li>
+              <li>Resolved software defects through debugging.</li>
+              <li>Collaborated with cross-functional teams on system architecture.</li>
+            </ul>
+          </div>
+        </div>
 
-        // Initialize when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initHeroAnimation);
-        } else {
-            initHeroAnimation();
-        }
-    })();
-    </script>
+        <!-- Education -->
+        <div class="education-block reveal-up delay-200">
+          <h4 class="subsection-title">Education</h4>
+          <div class="edu-card">
+            <span class="edu-date">2022 - 2026 (Expected)</span>
+            <h4>B.Tech in Computer Science & Engineering</h4>
+            <p>Dr. A.P.J. Abdul Kalam Technical University</p>
+            <span class="edu-badge">CGPA: 7.5/10</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-cream">
+      <div class="container">
+        <h2 class="section-label reveal-up">Toolbox</h2>
+        <h3 class="section-title reveal-up">Skills & Technologies</h3>
+        <div class="skills-grid">
+          <div class="skill-card reveal-up">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h4 class="skill-name">Node.js</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-card reveal-up delay-50">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <h4 class="skill-name">Express.js</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-card reveal-up delay-100">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <h4 class="skill-name">REST APIs</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-card reveal-up delay-150">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h4 class="skill-name">MongoDB</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-card reveal-up">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12v7c0 1.66 4 3 9 3s9-1.34 9-3v-7"/></svg>
+            </div>
+            <h4 class="skill-name">MySQL</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-card reveal-up delay-50">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h4 class="skill-name">Java</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-card reveal-up delay-100">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/></svg>
+            </div>
+            <h4 class="skill-name">Python</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-card reveal-up delay-150">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg>
+            </div>
+            <h4 class="skill-name">Git & GitHub</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-card reveal-up">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h4 class="skill-name">Linux CLI</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+          </div>
+          <div class="skill-card reveal-up delay-50">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+            </div>
+            <h4 class="skill-name">Postman</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-label reveal-up">Portfolio</h2>
+        <h3 class="section-title reveal-up">Selected Work</h3>
+        <!-- Filter Buttons -->
+        <div class="project-filters reveal-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card reveal-up" data-category="backend">
+            <div class="project-header">
+              <h4>Task & Project System</h4>
+              <span class="status-badge">Ongoing</span>
+            </div>
+            <p class="project-desc">Secure, scalable backend-focused web app with JWT authentication, RBAC, and clean modular architecture.</p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">JWT</span>
+            </div>
+            <div class="project-links">
+              <button class="project-preview-btn" data-project="task-system">Details</button>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal-up delay-100" data-category="fullstack">
+            <div class="project-header">
+              <h4>Smart Internship Recommender</h4>
+              <a href="https://github.com/Asit-14/Smart-Internship-Recommender" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            <p class="project-desc">Government-backed AI platform. Personalized ML algorithms, explainable AI, support for 13 Indian languages.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">ML</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Asit-14/Smart-Internship-Recommender" target="_blank" rel="noopener" class="project-link-btn">GitHub</a>
+              <button class="project-preview-btn" data-project="internship-recommender">Details</button>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal-up delay-200" data-category="fullstack">
+            <div class="project-header">
+              <h4>EchoSphere - Real-Time Chat</h4>
+              <a href="https://www.techinc.app" target="_blank" rel="noopener" class="icon-link live-badge" aria-label="Live Demo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14"/></svg>
+              </a>
+            </div>
+            <p class="project-desc">A real-time chat application with seamless cross-device communication and secure Google/GitHub OAuth.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.techinc.app" target="_blank" rel="noopener" class="project-link-btn">Live Demo</a>
+              <button class="project-preview-btn" data-project="echosphere">Details</button>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal-up" data-category="backend">
+            <div class="project-header">
+              <h4>Face Recognition System</h4>
+              <a href="https://github.com/Asit-14/Face-Recognition-project" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            <p class="project-desc">Real-time biometric system built with OpenCV and dlib. Detects and matches faces from live webcam feeds.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">dlib</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Asit-14/Face-Recognition-project" target="_blank" rel="noopener" class="project-link-btn">GitHub</a>
+              <button class="project-preview-btn" data-project="face-recognition">Details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Database Schema Viewer -->
+    <section id="schema" class="section section-cream">
+      <div class="container">
+        <h2 class="section-label reveal-up">Data Layer</h2>
+        <h3 class="section-title reveal-up">Database Schema</h3>
+        <p class="section-desc reveal-up">A peek into how I model data for backend systems.</p>
+        <div class="schema-viewer reveal-up">
+          <div class="schema-table" data-expanded="false">
+            <button class="schema-header" aria-expanded="false">
+              <div class="schema-header-left">
+                <svg class="schema-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
+                <span class="schema-table-name">Users</span>
+              </div>
+              <svg class="schema-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="schema-body">
+              <div class="schema-row"><span class="schema-key">PK</span><span class="schema-field">_id</span><span class="schema-type">ObjectId</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">name</span><span class="schema-type">String</span></div>
+              <div class="schema-row"><span class="schema-key">UQ</span><span class="schema-field">email</span><span class="schema-type">String</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">password</span><span class="schema-type">String (hashed)</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">role</span><span class="schema-type">Enum [admin, user]</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">createdAt</span><span class="schema-type">Date</span></div>
+            </div>
+          </div>
+          <div class="schema-relation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="schema-rel-icon"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            <span>has many</span>
+          </div>
+          <div class="schema-table" data-expanded="false">
+            <button class="schema-header" aria-expanded="false">
+              <div class="schema-header-left">
+                <svg class="schema-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
+                <span class="schema-table-name">Projects</span>
+              </div>
+              <svg class="schema-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="schema-body">
+              <div class="schema-row"><span class="schema-key">PK</span><span class="schema-field">_id</span><span class="schema-type">ObjectId</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">title</span><span class="schema-type">String</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">description</span><span class="schema-type">String</span></div>
+              <div class="schema-row"><span class="schema-key">FK</span><span class="schema-field">owner</span><span class="schema-type">ObjectId (Users)</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">status</span><span class="schema-type">Enum [active, archived]</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">createdAt</span><span class="schema-type">Date</span></div>
+            </div>
+          </div>
+          <div class="schema-relation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="schema-rel-icon"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            <span>has many</span>
+          </div>
+          <div class="schema-table" data-expanded="false">
+            <button class="schema-header" aria-expanded="false">
+              <div class="schema-header-left">
+                <svg class="schema-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
+                <span class="schema-table-name">Tasks</span>
+              </div>
+              <svg class="schema-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="schema-body">
+              <div class="schema-row"><span class="schema-key">PK</span><span class="schema-field">_id</span><span class="schema-type">ObjectId</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">title</span><span class="schema-type">String</span></div>
+              <div class="schema-row"><span class="schema-key">FK</span><span class="schema-field">project</span><span class="schema-type">ObjectId (Projects)</span></div>
+              <div class="schema-row"><span class="schema-key">FK</span><span class="schema-field">assignee</span><span class="schema-type">ObjectId (Users)</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">priority</span><span class="schema-type">Enum [low, medium, high]</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">status</span><span class="schema-type">Enum [todo, in_progress, done]</span></div>
+              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">dueDate</span><span class="schema-type">Date</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container content-center">
+        <h2 class="section-label reveal-up">Get in Touch</h2>
+        <h3 class="section-title reveal-up">Let's Connect</h3>
+        <p class="contact-sub reveal-up">Open to backend development or full stack development opportunities.</p>
+
+        <form class="contact-form reveal-up" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="form-name" name="name" required autocomplete="name" />
+            <label for="form-name" class="floating-label">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="form-email" name="email" required autocomplete="email" />
+            <label for="form-email" class="floating-label">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="form-message" name="message" rows="4" required></textarea>
+            <label for="form-message" class="floating-label">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-send" id="send-btn">
+            <span class="btn-text">Send Message</span>
+            <svg class="btn-icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <svg class="btn-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </form>
+
+        <div class="social-links reveal-up delay-100">
+          <a href="mailto:asitshakya789@gmail.com" class="social-icon" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/asit14" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/Asit-14" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+
+        <footer class="site-footer">
+          <p>&copy; 2026 Asit Kumar. Crafted with care.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-body">
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <div id="modal-tags" class="project-tags"></div>
+        <div id="modal-links" class="modal-links"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/header.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
