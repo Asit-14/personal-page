@@ -1,712 +1,1027 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Basic -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asit Kumar — Backend Engineer | Portfolio</title>
-  <meta name="description" content="Asit Kumar — Software Engineer specializing in scalable backend systems, Node.js, REST APIs, and clean architecture. Explore my projects, skills, and experience." />
-  <meta name="keywords" content="Asit Kumar, Backend Engineer, Node.js, REST APIs, Portfolio, Software Engineer, Full Stack Developer" />
-  <meta name="theme-color" content="#E4B363" />
-  <meta name="color-scheme" content="light" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/faviconlogo.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/faviconlogo.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/faviconlogo.png" />
+  <!-- Primary SEO -->
+  <title>Asit Kumar | B.Tech CSE Student & Backend Developer</title>
 
-  <!-- SEO -->
-  <link rel="canonical" href="https://techasit.dev" />
+  <meta name="description"
+    content="Asit Kumar is a B.Tech Computer Science student and backend developer skilled in FastAPI, Node.js, PostgreSQL, REST APIs, scalable backend systems, and modern web development." />
+
+  <meta name="keywords"
+    content="Asit Kumar, Backend Developer, B.Tech Student, FastAPI Developer, Node.js Developer, PostgreSQL, REST APIs, Software Engineer, Web Developer, Java Developer" />
+
   <meta name="author" content="Asit Kumar" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0B0F14" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Asit Kumar — Backend Engineer" />
-  <meta property="og:description" content="Building scalable backend architectures with Node.js and clean system design." />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://techasit.dev/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/faviconlogo.png" />
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://techasit.dev" />
-  <meta property="og:image" content="https://techasit.dev/assets/hero-image.png" />
-  <meta property="og:site_name" content="Asit Kumar Portfolio" />
+  <meta property="og:url" content="https://techasit.dev/" />
+  <meta property="og:title" content="Asit Kumar | Backend Developer" />
+  <meta property="og:description"
+    content="Backend Developer building scalable APIs and modern backend systems using FastAPI, Node.js, and PostgreSQL." />
+  <meta property="og:image" content="https://techasit.dev/assets/preview.png" />
+  <meta property="og:site_name" content="TechAsit" />
+  <meta property="og:locale" content="en_US" />
 
-  <!-- Twitter -->
+  <!-- Twitter SEO -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Asit Kumar — Backend Engineer" />
-  <meta name="twitter:description" content="Scalable backend systems, APIs, and architecture." />
-  <meta name="twitter:image" content="https://techasit.dev/assets/hero-image.png" />
+  <meta name="twitter:title" content="Asit Kumar | Backend Developer" />
+  <meta name="twitter:description" content="Backend Developer building scalable APIs and systems." />
+  <meta name="twitter:image" content="https://techasit.dev/assets/preview.png" />
 
-  <!-- Fonts -->
+  <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/panels.css" />
+  <link rel="stylesheet" href="css/graph.css" />
+
+  <!-- Structured Data / Google SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Asit Kumar",
+    "url": "https://techasit.dev",
+    "image": "https://techasit.dev/assets/pic.png",
+    "jobTitle": "Backend Developer",
+    "description": "B.Tech Computer Science student and backend developer skilled in FastAPI, Node.js, PostgreSQL, REST APIs, and scalable backend systems.",
+    "sameAs": [
+      "https://github.com/Asit-14",
+      "https://www.linkedin.com/in/asit14/"
+    ],
+    "knowsAbout": [
+      "FastAPI",
+      "Node.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Backend Development",
+      "JavaScript",
+      "Web Development",
+      "Python",
+      "Java"
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
-  <!-- Page Loader -->
+
+
+  <!-- =========================
+     ENGINEER TERMINAL LOADER
+========================= -->
+
   <div id="page-loader" class="page-loader">
+
+    <div class="loader-grid"></div>
+
     <div class="loader-content">
-      <div class="loader-spinner">
-        <svg viewBox="0 0 50 50" class="loader-svg">
-          <circle cx="25" cy="25" r="20" fill="none" stroke="#E4B363" stroke-width="3" stroke-linecap="round" stroke-dasharray="90 150" stroke-dashoffset="0">
-            <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite"/>
-          </circle>
+
+      <!-- Loader Core -->
+      <div class="core-loader">
+
+        <svg class="core-svg" viewBox="0 0 200 200">
+
+          <circle class="ring outer-ring" cx="100" cy="100" r="72" />
+
+          <circle class="ring middle-ring" cx="100" cy="100" r="52" />
+
+          <circle class="inner-core" cx="100" cy="100" r="18" />
+
         </svg>
+
+        <div class="core-center">
+          <span>AK</span>
+        </div>
+
       </div>
-      <p class="loader-text">Initializing</p>
+
+      <!-- Status -->
+      <div class="loader-status">
+
+        <p class="loader-title">
+          Backend Systems Initializing
+        </p>
+
+        <div class="loader-lines">
+          <span>> Loading APIs...</span>
+          <span>> Connecting Database...</span>
+          <span>> Starting Services...</span>
+        </div>
+
+      </div>
+
     </div>
+
   </div>
 
-  <!-- Scroll Progress Bar -->
-  <div id="scroll-progress" class="scroll-progress"></div>
 
-  <!-- Navigation -->
-  <header class="navbar" id="navbar" role="banner">
-    <div class="navbar-inner">
-      <!-- Left: Brand -->
-      <div class="nav-brand">
-        <a href="#home" class="nav-logo" aria-label="Asit Kumar — Home">
-          <span class="logo-text">Asit<span class="logo-accent">.</span>Kumar</span>
-          <span class="status-indicator" title="System Online" aria-hidden="true">
-            <span class="status-dot"></span>
-          </span>
-        </a>
-      </div>
-      <!-- Center: Links (Desktop) -->
-      <nav class="nav-center" id="nav-menu" role="navigation" aria-label="Main navigation">
-        <ul class="nav-links" role="menubar">
-          <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
-          <li role="none"><a href="#architecture" class="nav-link" role="menuitem">Architecture</a></li>
-          <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
-          <li role="none"><a href="api-playground.html" class="nav-link" role="menuitem">Playground</a></li>
-          <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- Right: CTA + Hamburger -->
-      <div class="nav-end">
-        <a href="#contact" class="btn-build" aria-label="Get in touch">
-          <span class="btn-build-pulse" aria-hidden="true"></span>
-          Let's Build
-        </a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
+
+  <!-- Minimal Floating Top Bar (replaces full navbar) -->
+  <header class="top-bar" id="navbar" role="banner">
+    <a href="#" class="top-bar-logo" aria-label="Home">
+      Asit<span class="logo-accent">.</span>Kumar
+    </a>
+    <div class="top-bar-status">
+      <span class="top-bar-dot"></span>
+      <span class="top-bar-text">Available &mdash; Backend Developer</span>
     </div>
-    <!-- Mobile Dropdown Panel -->
-    <div class="mobile-panel" id="mobile-panel" aria-hidden="true">
-      <nav class="mobile-nav" aria-label="Mobile navigation">
-        <ul class="mobile-links">
-          <li><a href="#home" class="mobile-link">Home</a></li>
-          <li><a href="#architecture" class="mobile-link">Architecture</a></li>
-          <li><a href="#projects" class="mobile-link">Projects</a></li>
-          <li><a href="api-playground.html" class="mobile-link">Playground</a></li>
-          <li><a href="#contact" class="mobile-link">Contact</a></li>
-        </ul>
-        <a href="#contact" class="mobile-cta">Let's Build Together</a>
-      </nav>
-    </div>
+    <a href="api-playground.html" class="top-bar-link">Playground &#x2197;</a>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <p class="hero-greeting hero-reveal">Hello, I'm</p>
-          <h1 class="hero-name">Asit Kumar</h1>
-          <p class="hero-role hero-reveal">Backend Engineer | System Thinker</p>
-          <p class="hero-desc hero-reveal">I design and build scalable backend architectures with clean code, secure APIs, and thoughtful system design.</p>
-          <div class="hero-cta-group hero-reveal">
-            <a href="#architecture" class="btn-hero-primary">Explore Architecture</a>
-            <a href="#projects" class="btn-hero-outline">View Projects</a>
-          </div>
+
+  <!-- Graph Scene -->
+  <main class="graph-scene" id="graph-scene" role="main" aria-label="Interactive portfolio graph">
+    <div class="graph-bg"></div>
+    <svg class="graph-svg" id="graph-svg" aria-hidden="true"></svg>
+
+    <!-- Center Identity Node -->
+    <div class="graph-node-center" id="graph-center">
+      <div class="center-ring"></div>
+      <div class="center-ring center-ring-2"></div>
+      <div class="center-card">
+        <div class="center-status">
+          <span class="center-status-dot"></span>
+          Available for Backend Roles
         </div>
-        <div class="hero-visual">
-          <!-- Mini Architecture Diagram -->
-          <div class="hero-diagram">
-            <div class="diagram-node">
-              <div class="diagram-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-              </div>
-              <div class="diagram-node-info">
-                <span class="diagram-node-label">API Gateway</span>
-                <span class="diagram-node-tech">Express.js / REST</span>
-              </div>
-            </div>
-            <div class="diagram-connector"><span class="pulse-dot"></span></div>
-            <div class="diagram-node">
-              <div class="diagram-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              </div>
-              <div class="diagram-node-info">
-                <span class="diagram-node-label">Service Layer</span>
-                <span class="diagram-node-tech">Business Logic</span>
-              </div>
-            </div>
-            <div class="diagram-connector"><span class="pulse-dot"></span></div>
-            <div class="diagram-node">
-              <div class="diagram-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-              </div>
-              <div class="diagram-node-info">
-                <span class="diagram-node-label">Database</span>
-                <span class="diagram-node-tech">MongoDB / MySQL</span>
-              </div>
-            </div>
-          </div>
-          <!-- Typing Terminal -->
-          <div class="hero-terminal">
-            <div class="terminal-header">
-              <span class="terminal-dot red"></span>
-              <span class="terminal-dot yellow"></span>
-              <span class="terminal-dot green"></span>
-              <span class="terminal-title">backend.js</span>
-            </div>
-            <div class="terminal-body">
-              <span class="terminal-prompt">$ </span><span class="terminal-text" id="typing-text"></span><span class="terminal-cursor"></span>
-            </div>
-          </div>
+        <h1 class="center-name">Asit Kumar</h1>
+        <p class="center-role">Backend Developer</p>
+        <p class="center-tagline">Building scalable backend systems, APIs, and real-time applications.</p>
+        <div class="center-links">
+          <a href="https://www.linkedin.com/in/asit14/" target="_blank" rel="noopener" class="center-link">LinkedIn</a>
+          <a href="https://github.com/Asit-14" target="_blank" rel="noopener" class="center-link">GitHub</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- How I Engineer Systems Section -->
-    <section id="engineering" class="section">
-      <div class="container">
-        <h2 class="section-label reveal-up">Process</h2>
-        <h3 class="section-title reveal-up">How I Engineer Systems</h3>
-        <p class="section-desc reveal-up">Every backend system I build follows a structured approach from requirements to deployment.</p>
-        <div class="engineering-grid">
-          <div class="eng-card reveal-up" data-step="01">
-            <div class="eng-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
-            </div>
-            <h4>Requirement Breakdown</h4>
-            <p>Analyzing business requirements, defining API contracts, and mapping data flows before writing any code.</p>
-          </div>
-          <div class="eng-card reveal-up delay-50" data-step="02">
-            <div class="eng-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-            </div>
-            <h4>Database Modeling</h4>
-            <p>Designing normalized schemas, defining relationships, indexing strategies, and planning for data integrity.</p>
-          </div>
-          <div class="eng-card reveal-up delay-100" data-step="03">
-            <div class="eng-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            </div>
-            <h4>Secure API Design</h4>
-            <p>Implementing JWT authentication, role-based access control, input validation, and rate limiting.</p>
-          </div>
-          <div class="eng-card reveal-up" data-step="04">
-            <div class="eng-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <h4>Error Handling Strategy</h4>
-            <p>Centralized error middleware, structured error responses, logging, and graceful failure recovery.</p>
-          </div>
-          <div class="eng-card reveal-up delay-50" data-step="05">
-            <div class="eng-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            </div>
-            <h4>Performance Tuning</h4>
-            <p>Query optimization, caching strategies, connection pooling, and efficient data serialization.</p>
-          </div>
-          <div class="eng-card reveal-up delay-100" data-step="06">
-            <div class="eng-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
-            </div>
-            <h4>Deployment Strategy</h4>
-            <p>CI/CD pipelines, environment configuration, monitoring setup, and production-ready deployments.</p>
-          </div>
-        </div>
+    <!-- Satellite Nodes -->
+    <button class="graph-node" data-panel="projects" aria-label="View Projects">
+      <div class="node-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M3 7h18M3 12h18M3 17h12" />
+        </svg>
       </div>
-    </section>
+      <span class="node-label">Projects</span>
+      <span class="node-hint">4 builds</span>
+    </button>
 
-    <!-- Architecture Section -->
-    <section id="architecture" class="section section-cream">
-      <div class="container">
-        <h2 class="section-label reveal-up">System Design</h2>
-        <h3 class="section-title reveal-up">Architecture Overview</h3>
-        <p class="section-desc reveal-up">A visual representation of how I structure backend services.</p>
-
-        <div class="architecture-wrapper reveal-up">
-          <div class="arch-diagram" id="arch-diagram">
-            <!-- Request Flow Line -->
-            <svg class="arch-flow-svg" id="arch-flow-svg" aria-hidden="true"></svg>
-
-            <!-- Nodes -->
-            <div class="arch-node" data-node="client" data-connects="api">
-              <div class="arch-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              </div>
-              <span class="arch-node-label">Client</span>
-              <span class="arch-node-tech">Browser / Mobile</span>
-            </div>
-
-            <div class="arch-node" data-node="api" data-connects="auth,service">
-              <div class="arch-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-              </div>
-              <span class="arch-node-label">API Layer</span>
-              <span class="arch-node-tech">Express.js / REST</span>
-            </div>
-
-            <div class="arch-node" data-node="auth" data-connects="service">
-              <div class="arch-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-              </div>
-              <span class="arch-node-label">Auth Module</span>
-              <span class="arch-node-tech">JWT / RBAC</span>
-            </div>
-
-            <div class="arch-node" data-node="service" data-connects="database,cache,logger">
-              <div class="arch-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              </div>
-              <span class="arch-node-label">Service Layer</span>
-              <span class="arch-node-tech">Business Logic</span>
-            </div>
-
-            <div class="arch-node" data-node="database">
-              <div class="arch-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-              </div>
-              <span class="arch-node-label">Database</span>
-              <span class="arch-node-tech">MongoDB / MySQL</span>
-            </div>
-
-            <div class="arch-node" data-node="cache">
-              <div class="arch-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              </div>
-              <span class="arch-node-label">Cache</span>
-              <span class="arch-node-tech">In-Memory</span>
-            </div>
-
-            <div class="arch-node" data-node="logger">
-              <div class="arch-node-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              </div>
-              <span class="arch-node-label">Logger</span>
-              <span class="arch-node-tech">Winston / Logs</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Backend Metrics Dashboard -->
-        <div class="metrics-dashboard reveal-up">
-          <h4 class="metrics-title">Live System Metrics <span class="metrics-badge">Simulated</span></h4>
-          <div class="metrics-grid">
-            <div class="metric-card">
-              <div class="metric-card-header">
-                <span class="metric-card-label">Requests / min</span>
-                <span class="metric-card-status status-green"></span>
-              </div>
-              <span class="metric-card-value" id="metric-rpm">142</span>
-              <div class="metric-bar">
-                <div class="metric-bar-fill" id="metric-rpm-bar" style="width: 71%"></div>
-              </div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-card-header">
-                <span class="metric-card-label">Avg Latency</span>
-                <span class="metric-card-status status-green"></span>
-              </div>
-              <span class="metric-card-value" id="metric-latency">23<small>ms</small></span>
-              <div class="metric-bar">
-                <div class="metric-bar-fill" id="metric-latency-bar" style="width: 23%"></div>
-              </div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-card-header">
-                <span class="metric-card-label">Error Rate</span>
-                <span class="metric-card-status status-green"></span>
-              </div>
-              <span class="metric-card-value" id="metric-errors">0.3<small>%</small></span>
-              <div class="metric-bar">
-                <div class="metric-bar-fill metric-bar-error" id="metric-errors-bar" style="width: 3%"></div>
-              </div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-card-header">
-                <span class="metric-card-label">System Health</span>
-                <span class="metric-card-status status-green"></span>
-              </div>
-              <span class="metric-card-value metric-health" id="metric-health">Operational</span>
-              <div class="metric-bar">
-                <div class="metric-bar-fill metric-bar-health" id="metric-health-bar" style="width: 98%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <button class="graph-node" data-panel="skills" aria-label="View Skills">
+      <div class="node-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
       </div>
-    </section>
+      <span class="node-label">Skills</span>
+      <span class="node-hint">15+ techs</span>
+    </button>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2 class="section-label reveal-up">Career</h2>
-        <h3 class="section-title reveal-up">Experience</h3>
-        <div class="experience-grid">
-          <div class="exp-card reveal-up">
-            <div class="exp-header">
-              <div>
-                <h4>Backend Developer Intern</h4>
-                <p class="exp-company">Webapphealing Technology Pvt Ltd, Noida</p>
-              </div>
-              <span class="exp-date">Jan 2026 - Present</span>
-            </div>
-            <ul class="exp-list">
-              <li>Handled backend development and integrated REST APIs using Node.js.</li>
-              <li>Debugged API issues and optimized backend logic.</li>
-              <li>Used Postman and Git for testing and collaboration.</li>
-            </ul>
-          </div>
-          <div class="exp-card reveal-up delay-100">
-            <div class="exp-header">
-              <div>
-                <h4>Software Intern</h4>
-                <p class="exp-company">Planetcast Media Services Limited, Noida</p>
-              </div>
-              <span class="exp-date">Sep 2025 - Dec 2025</span>
-            </div>
-            <ul class="exp-list">
-              <li>Developed and maintained backend logic for internal software modules.</li>
-              <li>Resolved software defects through debugging.</li>
-              <li>Collaborated with cross-functional teams on system architecture.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Education -->
-        <div class="education-block reveal-up delay-200">
-          <h4 class="subsection-title">Education</h4>
-          <div class="edu-card">
-            <span class="edu-date">2022 - 2026 (Expected)</span>
-            <h4>B.Tech in Computer Science & Engineering</h4>
-            <p>Dr. A.P.J. Abdul Kalam Technical University</p>
-            <span class="edu-badge">CGPA: 7.5/10</span>
-          </div>
-        </div>
+    <button class="graph-node" data-panel="experience" aria-label="View Experience">
+      <div class="node-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="2" y="7" width="20" height="14" rx="2" />
+          <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+        </svg>
       </div>
-    </section>
+      <span class="node-label">Experience</span>
+      <span class="node-hint">2 positions</span>
+    </button>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section section-cream">
-      <div class="container">
-        <h2 class="section-label reveal-up">Toolbox</h2>
-        <h3 class="section-title reveal-up">Skills & Technologies</h3>
-        <div class="skills-grid">
-          <div class="skill-card reveal-up">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <h4 class="skill-name">Node.js</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-card reveal-up delay-50">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-            </div>
-            <h4 class="skill-name">Express.js</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-card reveal-up delay-100">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-            </div>
-            <h4 class="skill-name">REST APIs</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-          </div>
-          <div class="skill-card reveal-up delay-150">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-            </div>
-            <h4 class="skill-name">MongoDB</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
-          </div>
-          <div class="skill-card reveal-up">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12v7c0 1.66 4 3 9 3s9-1.34 9-3v-7"/></svg>
-            </div>
-            <h4 class="skill-name">MySQL</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
-          </div>
-          <div class="skill-card reveal-up delay-50">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h4 class="skill-name">Java</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
-          </div>
-          <div class="skill-card reveal-up delay-100">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/></svg>
-            </div>
-            <h4 class="skill-name">Python</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-          </div>
-          <div class="skill-card reveal-up delay-150">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg>
-            </div>
-            <h4 class="skill-name">Git & GitHub</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-card reveal-up">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <h4 class="skill-name">Linux CLI</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
-          </div>
-          <div class="skill-card reveal-up delay-50">
-            <div class="skill-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-            </div>
-            <h4 class="skill-name">Postman</h4>
-            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-          </div>
-        </div>
+    <button class="graph-node" data-panel="profiles" aria-label="View Coding Profiles">
+      <div class="node-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+        </svg>
       </div>
-    </section>
+      <span class="node-label">Profiles</span>
+      <span class="node-hint">200+ solved</span>
+    </button>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-label reveal-up">Portfolio</h2>
-        <h3 class="section-title reveal-up">Selected Work</h3>
-        <!-- Filter Buttons -->
-        <div class="project-filters reveal-up">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="backend">Backend</button>
-          <button class="filter-btn" data-filter="fullstack">Fullstack</button>
-        </div>
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="project-card reveal-up" data-category="backend">
-            <div class="project-header">
-              <h4>Task & Project System</h4>
-              <span class="status-badge">Ongoing</span>
-            </div>
-            <p class="project-desc">Secure, scalable backend-focused web app with JWT authentication, RBAC, and clean modular architecture.</p>
-            <div class="project-tags">
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">JWT</span>
-            </div>
-            <div class="project-links">
-              <button class="project-preview-btn" data-project="task-system">Details</button>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card reveal-up delay-100" data-category="fullstack">
-            <div class="project-header">
-              <h4>Smart Internship Recommender</h4>
-              <a href="https://github.com/Asit-14/Smart-Internship-Recommender" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <p class="project-desc">Government-backed AI platform. Personalized ML algorithms, explainable AI, support for 13 Indian languages.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">ML</span>
-              <span class="tag">NLP</span>
-              <span class="tag">Flask</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Asit-14/Smart-Internship-Recommender" target="_blank" rel="noopener" class="project-link-btn">GitHub</a>
-              <button class="project-preview-btn" data-project="internship-recommender">Details</button>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card reveal-up delay-200" data-category="fullstack">
-            <div class="project-header">
-              <h4>EchoSphere - Real-Time Chat</h4>
-              <a href="https://www.techinc.app" target="_blank" rel="noopener" class="icon-link live-badge" aria-label="Live Demo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14"/></svg>
-              </a>
-            </div>
-            <p class="project-desc">A real-time chat application with seamless cross-device communication and secure Google/GitHub OAuth.</p>
-            <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Socket.io</span>
-              <span class="tag">MongoDB</span>
-            </div>
-            <div class="project-links">
-              <a href="https://www.techinc.app" target="_blank" rel="noopener" class="project-link-btn">Live Demo</a>
-              <button class="project-preview-btn" data-project="echosphere">Details</button>
-            </div>
-          </article>
-
-          <!-- Project 4 -->
-          <article class="project-card reveal-up" data-category="backend">
-            <div class="project-header">
-              <h4>Face Recognition System</h4>
-              <a href="https://github.com/Asit-14/Face-Recognition-project" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-            <p class="project-desc">Real-time biometric system built with OpenCV and dlib. Detects and matches faces from live webcam feeds.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">OpenCV</span>
-              <span class="tag">dlib</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/Asit-14/Face-Recognition-project" target="_blank" rel="noopener" class="project-link-btn">GitHub</a>
-              <button class="project-preview-btn" data-project="face-recognition">Details</button>
-            </div>
-          </article>
-        </div>
+    <button class="graph-node" data-panel="contact" aria-label="Contact Me">
+      <div class="node-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
       </div>
-    </section>
+      <span class="node-label">Contact</span>
+      <span class="node-hint">Let's connect</span>
+    </button>
 
-    <!-- Database Schema Viewer -->
-    <section id="schema" class="section section-cream">
-      <div class="container">
-        <h2 class="section-label reveal-up">Data Layer</h2>
-        <h3 class="section-title reveal-up">Database Schema</h3>
-        <p class="section-desc reveal-up">A peek into how I model data for backend systems.</p>
-        <div class="schema-viewer reveal-up">
-          <div class="schema-table" data-expanded="false">
-            <button class="schema-header" aria-expanded="false">
-              <div class="schema-header-left">
-                <svg class="schema-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
-                <span class="schema-table-name">Users</span>
-              </div>
-              <svg class="schema-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="schema-body">
-              <div class="schema-row"><span class="schema-key">PK</span><span class="schema-field">_id</span><span class="schema-type">ObjectId</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">name</span><span class="schema-type">String</span></div>
-              <div class="schema-row"><span class="schema-key">UQ</span><span class="schema-field">email</span><span class="schema-type">String</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">password</span><span class="schema-type">String (hashed)</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">role</span><span class="schema-type">Enum [admin, user]</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">createdAt</span><span class="schema-type">Date</span></div>
-            </div>
-          </div>
-          <div class="schema-relation">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="schema-rel-icon"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-            <span>has many</span>
-          </div>
-          <div class="schema-table" data-expanded="false">
-            <button class="schema-header" aria-expanded="false">
-              <div class="schema-header-left">
-                <svg class="schema-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
-                <span class="schema-table-name">Projects</span>
-              </div>
-              <svg class="schema-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="schema-body">
-              <div class="schema-row"><span class="schema-key">PK</span><span class="schema-field">_id</span><span class="schema-type">ObjectId</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">title</span><span class="schema-type">String</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">description</span><span class="schema-type">String</span></div>
-              <div class="schema-row"><span class="schema-key">FK</span><span class="schema-field">owner</span><span class="schema-type">ObjectId (Users)</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">status</span><span class="schema-type">Enum [active, archived]</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">createdAt</span><span class="schema-type">Date</span></div>
-            </div>
-          </div>
-          <div class="schema-relation">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="schema-rel-icon"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-            <span>has many</span>
-          </div>
-          <div class="schema-table" data-expanded="false">
-            <button class="schema-header" aria-expanded="false">
-              <div class="schema-header-left">
-                <svg class="schema-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
-                <span class="schema-table-name">Tasks</span>
-              </div>
-              <svg class="schema-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="schema-body">
-              <div class="schema-row"><span class="schema-key">PK</span><span class="schema-field">_id</span><span class="schema-type">ObjectId</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">title</span><span class="schema-type">String</span></div>
-              <div class="schema-row"><span class="schema-key">FK</span><span class="schema-field">project</span><span class="schema-type">ObjectId (Projects)</span></div>
-              <div class="schema-row"><span class="schema-key">FK</span><span class="schema-field">assignee</span><span class="schema-type">ObjectId (Users)</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">priority</span><span class="schema-type">Enum [low, medium, high]</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">status</span><span class="schema-type">Enum [todo, in_progress, done]</span></div>
-              <div class="schema-row"><span class="schema-key"></span><span class="schema-field">dueDate</span><span class="schema-type">Date</span></div>
-            </div>
-          </div>
-        </div>
+    <button class="graph-node" data-panel="resume" aria-label="View Resume">
+      <div class="node-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="16" y1="13" x2="8" y2="13" />
+          <line x1="16" y1="17" x2="8" y2="17" />
+        </svg>
       </div>
-    </section>
+      <span class="node-label">Resume</span>
+      <span class="node-hint">Download</span>
+    </button>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container content-center">
-        <h2 class="section-label reveal-up">Get in Touch</h2>
-        <h3 class="section-title reveal-up">Let's Connect</h3>
-        <p class="contact-sub reveal-up">Open to backend development or full stack development opportunities.</p>
-
-        <form class="contact-form reveal-up" id="contact-form">
-          <div class="form-group">
-            <input type="text" id="form-name" name="name" required autocomplete="name" />
-            <label for="form-name" class="floating-label">Your Name</label>
-          </div>
-          <div class="form-group">
-            <input type="email" id="form-email" name="email" required autocomplete="email" />
-            <label for="form-email" class="floating-label">Your Email</label>
-          </div>
-          <div class="form-group">
-            <textarea id="form-message" name="message" rows="4" required></textarea>
-            <label for="form-message" class="floating-label">Your Message</label>
-          </div>
-          <button type="submit" class="btn btn-primary btn-send" id="send-btn">
-            <span class="btn-text">Send Message</span>
-            <svg class="btn-icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            <svg class="btn-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-          </button>
-        </form>
-
-        <div class="social-links reveal-up delay-100">
-          <a href="mailto:asitshakya789@gmail.com" class="social-icon" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
-          <a href="https://linkedin.com/in/asit14" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="https://github.com/Asit-14" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-        </div>
-
-        <footer class="site-footer">
-          <p>&copy; 2026 Asit Kumar. Crafted with care.</p>
-        </footer>
-      </div>
-    </section>
+    <!-- System Status Bar -->
+    <div class="status-bar" role="status" aria-live="polite">
+      <span><span class="status-bar-dot"></span>System Online</span>
+      <span class="status-bar-sep">|</span>
+      <span>uptime <span id="sys-uptime">0s</span></span>
+      <span class="status-bar-sep">|</span>
+      <span>FastAPI &middot; Node.js &middot; PostgreSQL</span>
+      <span class="status-bar-sep">|</span>
+      <a href="api-playground.html">Playground &#x2197;</a>
+    </div>
   </main>
 
-  <!-- Project Modal -->
-  <div class="modal-overlay" id="project-modal">
-    <div class="modal-content">
-      <button class="modal-close" id="modal-close" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  <!-- Tooltip -->
+  <div class="node-tooltip" id="node-tooltip" role="tooltip" aria-hidden="true"></div>
+
+  <!-- Panel Overlay -->
+  <div class="panel-overlay" id="panel-overlay" aria-hidden="true"></div>
+
+  <!-- PROJECTS PANEL -->
+  <aside class="side-panel" id="panel-projects" role="dialog" aria-modal="true" aria-label="Projects">
+    <div class="panel-header">
+      <button class="panel-close" id="close-projects" aria-label="Close panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
       </button>
-      <div class="modal-body">
-        <h3 id="modal-title"></h3>
-        <p id="modal-desc"></p>
-        <div id="modal-tags" class="project-tags"></div>
-        <div id="modal-links" class="modal-links"></div>
+      <span class="panel-title">Projects <span class="panel-title-accent">// 4 builds</span></span>
+      <div class="proj-tabs">
+        <button class="proj-tab active" data-proj="0">01 &mdash; AI Platform</button>
+        <button class="proj-tab" data-proj="1">02 &mdash; Food Waste</button>
+        <button class="proj-tab" data-proj="2">03 &mdash; EchoSphere</button>
+        <button class="proj-tab" data-proj="3">04 &mdash; Face Recog.</button>
       </div>
+      <div class="panel-nav-arrows">
+        <button class="panel-nav-btn" data-nav-to="resume" aria-label="Previous: Resume">&#x2190; Resume</button>
+        <button class="panel-nav-btn" data-nav-to="skills" aria-label="Next: Skills">Skills &#x2192;</button>
+      </div>
+    </div>
+    <div class="panel-body">
+
+      <!-- ======= PROJECT 0 ======= -->
+      <div class="proj-content active" data-proj-content="0">
+        <div class="proj-header">
+          <div class="proj-number">01 / 04</div>
+          <h2 class="proj-title">AI-Powered Internship Recommendation Platform</h2>
+          <span class="proj-badge proj-badge-ai">AI &middot; Full-Stack</span>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Overview</div>
+          <p class="proj-overview-text">Full-stack internship management platform with AI-driven resume parsing, skill
+            extraction, and TF-IDF cosine similarity matching. Secure RESTful API backend with RBAC across student,
+            company, and admin roles. Designed for scalable internship lifecycle management and automated recommendation
+            pipelines.</p>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Architecture Highlights</div>
+          <div class="proj-arch-grid">
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F9E0;</span>
+              <div class="proj-arch-card-label">TF-IDF Engine</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F512;</span>
+              <div class="proj-arch-card-label">RBAC Auth</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F4C4;</span>
+              <div class="proj-arch-card-label">Resume Parser</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F5C4;&#xFE0F;</span>
+              <div class="proj-arch-card-label">PostgreSQL</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x26A1;</span>
+              <div class="proj-arch-card-label">FastAPI</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F310;</span>
+              <div class="proj-arch-card-label">Next.js UI</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Tech Stack</div>
+          <div class="proj-tech-tags"><span class="tag">FastAPI</span><span class="tag">Next.js</span><span
+              class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span
+              class="tag">JWT</span><span class="tag">RBAC</span><span class="tag">Scikit-learn</span><span
+              class="tag">Tailwind CSS</span></div>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Key Backend Features</div>
+          <ul class="proj-challenges-list">
+            <li>TF-IDF vectorization + cosine similarity scoring for internship matching</li>
+            <li>JWT authentication with RBAC for 3 isolated user roles</li>
+            <li>Async FastAPI endpoints with SQLAlchemy ORM and Alembic migrations</li>
+            <li>Resume parsing pipeline with skill extraction and normalization</li>
+          </ul>
+        </div>
+        <div class="proj-actions">
+          <a href="https://github.com/Asit-14/internship_recommendation" target="_blank" rel="noopener"
+            class="btn btn-secondary">&#x21D7;
+            GitHub</a>
+          <a href="https://internship-recommendation-two.vercel.app/" target="_blank" rel="noopener"
+            class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+
+      <!-- ======= PROJECT 1 ======= -->
+      <div class="proj-content" data-proj-content="1">
+        <div class="proj-header">
+          <div class="proj-number">02 / 04</div>
+          <h2 class="proj-title">Smart Food Waste Reduction Platform</h2>
+          <span class="proj-badge proj-badge-be">Backend &middot; Real-Time</span>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Overview</div>
+          <p class="proj-overview-text">Scalable food donation platform connecting donors and recipients via geospatial
+            matching, real-time donation tracking, and Redis-cached hot data paths. Full JWT + RBAC system for donors,
+            recipients, and admins with Socket.io event-driven updates.</p>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Architecture Highlights</div>
+          <div class="proj-arch-grid">
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F4CD;</span>
+              <div class="proj-arch-card-label">Geospatial API</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x26A1;</span>
+              <div class="proj-arch-card-label">Redis Cache</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F4AC;</span>
+              <div class="proj-arch-card-label">Socket.io RT</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F5C4;&#xFE0F;</span>
+              <div class="proj-arch-card-label">MongoDB</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F512;</span>
+              <div class="proj-arch-card-label">JWT / RBAC</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x269B;&#xFE0F;</span>
+              <div class="proj-arch-card-label">React.js UI</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Tech Stack</div>
+          <div class="proj-tech-tags"><span class="tag">Node.js</span><span class="tag">Express.js</span><span
+              class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">Socket.io</span><span
+              class="tag">JWT</span><span class="tag">RBAC</span><span class="tag">React.js</span></div>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Key Backend Features</div>
+          <ul class="proj-challenges-list">
+            <li>Geospatial indexing in MongoDB for efficient nearby-donor queries</li>
+            <li>Redis TTL caching strategy with real-time cache invalidation</li>
+            <li>Socket.io rooms for isolated donor-recipient session events</li>
+            <li>Role-based middleware separating donor, recipient, and admin APIs</li>
+          </ul>
+        </div>
+        <div class="proj-actions">
+          <a href="https://github.com/Asit-14/foodbridge-frontend" target="_blank" rel="noopener" class="btn btn-secondary">&#x21D7;
+            GitHub</a>
+          <a href="https://www.wastefood.tech/" target="_blank" rel="noopener" class="btn btn-primary">View Project</a>
+        </div>
+      </div>
+
+      <!-- ======= PROJECT 2 ======= -->
+      <div class="proj-content" data-proj-content="2">
+        <div class="proj-header">
+          <div class="proj-number">03 / 04</div>
+          <h2 class="proj-title">EchoSphere &mdash; Real-Time Chat Application</h2>
+          <span class="proj-badge proj-badge-rt">Real-Time &middot; Live</span>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Overview</div>
+          <p class="proj-overview-text">Production-grade real-time messaging platform with bidirectional Socket.io
+            events, OAuth 2.0 social login, and JWT session management. Secure Express.js API layer with input
+            validation, rate limiting, and scalable message delivery architecture. Fully deployed and live.</p>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Architecture Highlights</div>
+          <div class="proj-arch-grid">
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F4AC;</span>
+              <div class="proj-arch-card-label">Socket.io</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F511;</span>
+              <div class="proj-arch-card-label">OAuth 2.0</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F5C4;&#xFE0F;</span>
+              <div class="proj-arch-card-label">MongoDB</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F512;</span>
+              <div class="proj-arch-card-label">JWT Auth</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x26A1;</span>
+              <div class="proj-arch-card-label">Express.js</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F7E2;</span>
+              <div class="proj-arch-card-label">Live Deployed</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Tech Stack</div>
+          <div class="proj-tech-tags"><span class="tag">Node.js</span><span class="tag">Express.js</span><span
+              class="tag">MongoDB</span><span class="tag">Socket.io</span><span class="tag">OAuth 2.0</span><span
+              class="tag">JWT</span><span class="tag">React.js</span></div>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Key Backend Features</div>
+          <ul class="proj-challenges-list">
+            <li>Bidirectional WebSocket events with graceful reconnect and room isolation</li>
+            <li>OAuth 2.0 token exchange securely bridged to JWT session lifecycle</li>
+            <li>Message deduplication and ordering guarantees under concurrent load</li>
+            <li>Rate-limited REST API endpoints with input sanitization middleware</li>
+          </ul>
+        </div>
+        <div class="proj-actions">
+          <a href="https://github.com/Asit-14/echosphere-app" target="_blank" rel="noopener" class="btn btn-secondary">&#x21D7;
+            GitHub</a>
+          <a href="https://www.techinc.app" target="_blank" rel="noopener" class="btn btn-primary">&#x1F517; Live
+            Demo</a>
+        </div>
+      </div>
+
+      <!-- ======= PROJECT 3 ======= -->
+      <div class="proj-content" data-proj-content="3">
+        <div class="proj-header">
+          <div class="proj-number">04 / 04</div>
+          <h2 class="proj-title">Face Recognition System</h2>
+          <span class="proj-badge proj-badge-cv">Computer Vision &middot; Python</span>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Overview</div>
+          <p class="proj-overview-text">Real-time face recognition system using Python, OpenCV, and dlib face embeddings
+            for live webcam identity detection. Implements face encoding extraction, nearest-match recognition,
+            confidence scoring, and UI overlays. Optional DeepFace integration for AI-based age estimation workflows.
+          </p>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Architecture Highlights</div>
+          <div class="proj-arch-grid">
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F4F7;</span>
+              <div class="proj-arch-card-label">Live Webcam</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F9EC;</span>
+              <div class="proj-arch-card-label">Face Embeddings</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F3AF;</span>
+              <div class="proj-arch-card-label">Confidence Score</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F441;&#xFE0F;</span>
+              <div class="proj-arch-card-label">dlib Detector</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x1F916;</span>
+              <div class="proj-arch-card-label">DeepFace AI</div>
+            </div>
+            <div class="proj-arch-card"><span class="proj-arch-card-icon">&#x26A0;&#xFE0F;</span>
+              <div class="proj-arch-card-label">Error Handling</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Tech Stack</div>
+          <div class="proj-tech-tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span
+              class="tag">dlib</span><span class="tag">face_recognition</span><span class="tag">DeepFace</span><span
+              class="tag">NumPy</span></div>
+        </div>
+        <div class="proj-section">
+          <div class="proj-section-label">Key Backend Features</div>
+          <ul class="proj-challenges-list">
+            <li>Real-time face encoding at 30fps with multi-face tracking</li>
+            <li>Nearest-match algorithm using Euclidean distance on 128-d embeddings</li>
+            <li>Defensive error handling for missing images, low-light, and unknown faces</li>
+            <li>Optional async DeepFace age estimation without blocking main loop</li>
+          </ul>
+        </div>
+        <div class="proj-actions">
+          <a href="https://github.com/Asit-14/Face-Recognition-project" target="_blank" rel="noopener" class="btn btn-secondary">&#x21D7;
+            GitHub</a>
+        </div>
+      </div>
+
+    </div><!-- end panel-body -->
+  </aside>
+
+  <!-- SKILLS PANEL -->
+  <aside class="side-panel" id="panel-skills" role="dialog" aria-modal="true" aria-label="Skills">
+    <div class="panel-header">
+      <button class="panel-close" aria-label="Close panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg></button>
+      <span class="panel-title">Skills <span class="panel-title-accent">// 15+ technologies</span></span>
+      <div class="panel-nav-arrows">
+        <button class="panel-nav-btn" data-nav-to="projects" aria-label="Previous: Projects">&#x2190; Projects</button>
+        <button class="panel-nav-btn" data-nav-to="experience" aria-label="Next: Experience">Experience
+          &#x2192;</button>
+      </div>
+    </div>
+<div class="panel-body">
+  <p class="skills-intro">
+    Backend-focused engineering stack built through real-world APIs, scalable systems, real-time applications, cloud integrations, and AI-powered workflows.
+  </p>
+
+  <!-- Backend -->
+  <div class="skill-group skill-group--backend">
+    <div class="skill-group-header">
+      <span class="skill-group-label">Backend Engineering</span>
+      <span class="skill-group-bar"></span>
+      <span class="skill-group-count">7 skills</span>
+    </div>
+
+    <div class="skill-pills">
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">FastAPI</span>
+      <span class="skill-pill">Node.js</span>
+      <span class="skill-pill">Express.js</span>
+      <span class="skill-pill">REST APIs</span>
+      <span class="skill-pill">Socket.io</span>
+      <span class="skill-pill">Microservices</span>
     </div>
   </div>
 
-  <script src="js/header.js"></script>
-  <script src="js/hero.js"></script>
+  <!-- Databases -->
+  <div class="skill-group">
+    <div class="skill-group-header">
+      <span class="skill-group-label">Databases</span>
+      <span class="skill-group-bar"></span>
+      <span class="skill-group-count">4 skills</span>
+    </div>
+
+    <div class="skill-pills">
+      <span class="skill-pill">PostgreSQL</span>
+      <span class="skill-pill">MongoDB</span>
+      <span class="skill-pill">Redis</span>
+      <span class="skill-pill">MySQL</span>
+    </div>
+  </div>
+
+  <!-- Auth -->
+  <div class="skill-group">
+    <div class="skill-group-header">
+      <span class="skill-group-label">Auth & Security</span>
+      <span class="skill-group-bar"></span>
+      <span class="skill-group-count">4 skills</span>
+    </div>
+
+    <div class="skill-pills">
+      <span class="skill-pill">JWT</span>
+      <span class="skill-pill">RBAC</span>
+      <span class="skill-pill">OAuth 2.0</span>
+      <span class="skill-pill">Session Management</span>
+    </div>
+  </div>
+
+  <!-- AI -->
+  <div class="skill-group skill-group--ai">
+    <div class="skill-group-header">
+      <span class="skill-group-label">AI & Intelligent Systems</span>
+      <span class="skill-group-bar"></span>
+      <span class="skill-group-count">9 skills</span>
+    </div>
+
+    <div class="skill-pills">
+      <span class="skill-pill">RAG</span>
+      <span class="skill-pill">Vector Databases</span>
+      <span class="skill-pill">Scikit-learn</span>
+      <span class="skill-pill">TF-IDF</span>
+      <span class="skill-pill">Cosine Similarity</span>
+      <span class="skill-pill">OpenCV</span>
+      <span class="skill-pill">dlib</span>
+      <span class="skill-pill">DeepFace</span>
+      <span class="skill-pill">Resume Parsing</span>
+    </div>
+  </div>
+
+  <!-- Frontend -->
+  <div class="skill-group">
+    <div class="skill-group-header">
+      <span class="skill-group-label">Frontend</span>
+      <span class="skill-group-bar"></span>
+      <span class="skill-group-count">4 skills</span>
+    </div>
+
+    <div class="skill-pills">
+      <span class="skill-pill">React.js</span>
+      <span class="skill-pill">TypeScript</span>
+      <span class="skill-pill">HTML</span>
+      <span class="skill-pill">CSS</span>
+    </div>
+  </div>
+
+  <!-- DevOps -->
+  <div class="skill-group">
+    <div class="skill-group-header">
+      <span class="skill-group-label">DevOps & Tools</span>
+      <span class="skill-group-bar"></span>
+      <span class="skill-group-count">7 skills</span>
+    </div>
+
+    <div class="skill-pills">
+      <span class="skill-pill">Docker</span>
+      <span class="skill-pill">Git</span>
+      <span class="skill-pill">GitHub</span>
+      <span class="skill-pill">Linux</span>
+      <span class="skill-pill">AWS S3</span>
+      <span class="skill-pill">Postman</span>
+      <span class="skill-pill">CI/CD</span>
+    </div>
+  </div>
+
+  <!-- Languages -->
+  <div class="skill-group">
+    <div class="skill-group-header">
+      <span class="skill-group-label">Languages</span>
+      <span class="skill-group-bar"></span>
+      <span class="skill-group-count">5 skills</span>
+    </div>
+
+    <div class="skill-pills">
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">TypeScript</span>
+      <span class="skill-pill">SQL</span>
+      <span class="skill-pill">Java</span>
+    </div>
+  </div>
+</div>
+  </aside>
+
+  <!-- EXPERIENCE PANEL -->
+  <aside class="side-panel" id="panel-experience" role="dialog" aria-modal="true" aria-label="Experience">
+    <div class="panel-header">
+      <button class="panel-close" aria-label="Close panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg></button>
+      <span class="panel-title">Experience <span class="panel-title-accent">// 2 positions</span></span>
+      <div class="panel-nav-arrows">
+        <button class="panel-nav-btn" data-nav-to="skills" aria-label="Previous: Skills">&#x2190; Skills</button>
+        <button class="panel-nav-btn" data-nav-to="profiles" aria-label="Next: Profiles">Profiles &#x2192;</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <p class="exp-intro">Backend engineering roles focused on API design, authentication, and database optimization.
+      </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-role">Backend Developer Trainee</div>
+              <div class="timeline-company">Knowledge Excel Pvt Ltd</div>
+              <div class="timeline-date">Mar 2026 &mdash; Present</div>
+            </div>
+            <ul class="timeline-list">
+              <li>Building RESTful APIs using Python FastAPI with async patterns</li>
+              <li>PostgreSQL schema optimization, indexing, and query performance tuning</li>
+              <li>JWT authentication and secure session workflow implementation</li>
+              <li>AWS S3 integration and RAG-based AI workflow exploration</li>
+              <li>Agile collaboration with Git-based version control and code reviews</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-role">Backend Developer Intern</div>
+              <div class="timeline-company">Webapphealing Technology Pvt. Ltd.</div>
+              <div class="timeline-date">Dec 2024 &mdash; Feb 2025</div>
+            </div>
+            <ul class="timeline-list">
+              <li>Built 12+ RESTful API endpoints using Node.js and Express.js</li>
+              <li>Implemented JWT authentication and role-based access control</li>
+              <li>Developed reusable middleware layers and backend validation pipelines</li>
+              <li>Improved API request handling performance and response consistency</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+<div class="edu-section">
+  <div class="edu-label">Education</div>
+
+  <div class="edu-card">
+
+    <div class="edu-degree">
+      Bachelor of Technology (B.Tech) in Computer Science &amp; Engineering
+    </div>
+
+    <div class="edu-school">
+      Dr. A.P.J. Abdul Kalam Technical University
+    </div>
+
+    <div class="edu-meta">
+      <span class="edu-date">
+        2022 &mdash; 2026
+      </span>
+
+      <span class="edu-status">
+        Graduated
+      </span>
+
+      <span class="edu-cgpa">
+        CGPA 7.7 / 10
+      </span>
+    </div>
+
+  </div>
+</div>
+    </div>
+  </aside>
+
+  <!-- PROFILES PANEL -->
+  <aside class="side-panel" id="panel-profiles" role="dialog" aria-modal="true" aria-label="Coding Profiles">
+    <div class="panel-header">
+      <button class="panel-close" aria-label="Close panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg></button>
+      <span class="panel-title">Profiles <span class="panel-title-accent">// coding activity</span></span>
+      <div class="panel-nav-arrows">
+        <button class="panel-nav-btn" data-nav-to="experience" aria-label="Previous: Experience">&#x2190;
+          Experience</button>
+        <button class="panel-nav-btn" data-nav-to="contact" aria-label="Next: Contact">Contact &#x2192;</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <p class="profiles-intro">Consistent DSA practice and backend certifications across major platforms.</p>
+      <div class="profiles-summary">
+        <div><span class="summary-stat-value">200+</span><span class="summary-stat-label">LeetCode</span></div>
+        <div><span class="summary-stat-value">120+</span><span class="summary-stat-label">GFG</span></div>
+        <div><span class="summary-stat-value">3+</span><span class="summary-stat-label">Certifications</span></div>
+      </div>
+      <div class="profiles-grid" style="margin-top:1.6rem">
+        <div class="profile-card" style="--card-color: var(--amber)">
+          <div class="profile-card-icon">&#x1F9E9;</div>
+          <div class="profile-card-name">LeetCode</div>
+          <div class="profile-card-stat">200+</div>
+          <div class="profile-card-desc">Arrays, graphs, trees, DP, sliding window — consistent problem solving track.
+          </div>
+          <a href="https://leetcode.com/asit14/" target="_blank" rel="noopener" class="profile-card-link">View Profile
+            &#x2197;</a>
+        </div>
+        <div class="profile-card" style="--card-color: var(--accent)">
+          <div class="profile-card-icon">&#x1F4BB;</div>
+          <div class="profile-card-name">GeeksforGeeks</div>
+          <div class="profile-card-stat">120+</div>
+          <div class="profile-card-desc">Core DSA topics, coding patterns, and algorithm walkthroughs.</div>
+          <a href="https://www.geeksforgeeks.org/profile/asit14" target="_blank" rel="noopener" class="profile-card-link">View Profile
+            &#x2197;</a>
+        </div>
+        <div class="profile-card" style="--card-color: var(--blue)">
+          <div class="profile-card-icon">&#x1F3C6;</div>
+          <div class="profile-card-name">HackerRank</div>
+          <div class="profile-card-stat">4 Cert</div>
+          <div class="profile-card-desc">Backend and language certifications validating core engineering fundamentals.
+          </div>
+          <a href="https://www.hackerrank.com/profile/asit_14" target="_blank" rel="noopener" class="profile-card-link">View Profile
+            &#x2197;</a>
+        </div>
+        <div class="profile-card" style="--card-color: var(--text-muted)">
+          <div class="profile-card-icon">&#x1F4E6;</div>
+          <div class="profile-card-name">GitHub</div>
+          <div class="profile-card-stat">Asit-14</div>
+          <div class="profile-card-desc">Open source projects, portfolio code, and backend engineering builds.</div>
+          <a href="https://github.com/Asit-14" target="_blank" rel="noopener" class="profile-card-link">View Profile
+            &#x2197;</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CONTACT PANEL -->
+  <aside class="side-panel" id="panel-contact" role="dialog" aria-modal="true" aria-label="Contact">
+    <div class="panel-header">
+      <button class="panel-close" aria-label="Close panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <span class="panel-title">Contact <span class="panel-title-accent">// let's connect</span></span>
+      <div class="panel-nav-arrows">
+        <button class="panel-nav-btn" data-nav-to="profiles" aria-label="Previous: Profiles">&#x2190; Profiles</button>
+        <button class="panel-nav-btn" data-nav-to="resume" aria-label="Next: Resume">Resume &#x2192;</button>
+      </div>
+    </div>
+    <div class="panel-body">
+
+  <div class="contact-availability">
+    <span class="contact-avail-dot"></span>
+    Open to Backend, SDE-1 & Internship Opportunities
+  </div>
+
+  <p class="contact-intro">
+    Let's connect across platforms — coding, collaboration, networking, and building real-world systems.
+  </p>
+
+  <!-- CONNECT GRID -->
+
+  <div class="connect-grid">
+
+    <!-- LinkedIn -->
+
+    <a href="https://www.linkedin.com/in/asit14/"
+       target="_blank"
+       rel="noopener"
+       class="connect-card">
+
+      <div class="connect-icon linkedin">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z"/>
+        </svg>
+      </div>
+
+      <div class="connect-info">
+        <h4>LinkedIn</h4>
+        <p>Professional Network</p>
+      </div>
+
+    </a>
+
+    <!-- GitHub -->
+
+    <a href="https://github.com/Asit-14"
+       target="_blank"
+       rel="noopener"
+       class="connect-card">
+
+      <div class="connect-icon github">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.11.793-.261.793-.577v-2.234c-3.338.726-4.034-1.417-4.034-1.417-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.304-5.466-1.333-5.466-5.93 0-1.312.469-2.382 1.236-3.222-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23A11.52 11.52 0 0112 5.8c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.373.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.565 21.796 24 17.3 24 12c0-6.63-5.373-12-12-12z"/>
+        </svg>
+      </div>
+
+      <div class="connect-info">
+        <h4>GitHub</h4>
+        <p>Projects & Code</p>
+      </div>
+
+    </a>
+
+    <!-- GeeksforGeeks -->
+
+    <a href="https://www.geeksforgeeks.org/profile/asit14"
+       target="_blank"
+       rel="noopener"
+       class="connect-card">
+
+      <div class="connect-icon gfg">
+        GFG
+      </div>
+
+      <div class="connect-info">
+        <h4>GeeksforGeeks</h4>
+        <p>DSA & Problem Solving</p>
+      </div>
+
+    </a>
+
+    <!-- Instagram -->
+
+    <a href="https://instagram.com/asit.14"
+       target="_blank"
+       rel="noopener"
+       class="connect-card">
+
+      <div class="connect-icon instagram">
+        IG
+      </div>
+
+      <div class="connect-info">
+        <h4>Instagram</h4>
+        <p>Personal & Creative</p>
+      </div>
+
+    </a>
+
+    <!-- Email -->
+
+    <a href="mailto:asitshakya789@gmail.com"
+       class="connect-card">
+
+      <div class="connect-icon email">
+        @
+      </div>
+
+      <div class="connect-info">
+        <h4>Email</h4>
+        <p>Direct Communication</p>
+      </div>
+
+    </a>
+
+    <!-- LeetCode -->
+
+    <a href="https://leetcode.com/asit14"
+       target="_blank"
+       rel="noopener"
+       class="connect-card">
+
+      <div class="connect-icon leetcode">
+        LC
+      </div>
+
+      <div class="connect-info">
+        <h4>LeetCode</h4>
+        <p>Competitive Coding</p>
+      </div>
+
+    </a>
+
+  </div>
+
+</div>
+  </aside>
+
+  <!-- RESUME PANEL -->
+  <aside class="side-panel" id="panel-resume" role="dialog" aria-modal="true" aria-label="Resume">
+    <div class="panel-header">
+      <button class="panel-close" aria-label="Close panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg></button>
+      <span class="panel-title">Resume <span class="panel-title-accent">// Asit Kumar</span></span>
+      <div class="panel-nav-arrows">
+        <button class="panel-nav-btn" data-nav-to="contact" aria-label="Previous: Contact">&#x2190; Contact</button>
+        <button class="panel-nav-btn" data-nav-to="projects" aria-label="Next: Projects">Projects &#x2192;</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="resume-panel-inner">
+        <div class="resume-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+        </div>
+        <h2 class="resume-name">Asit Kumar</h2>
+        <p class="resume-role">Backend Developer</p>
+        <p class="resume-note">FastAPI &middot; Node.js &middot; PostgreSQL &middot; REST APIs &middot; JWT &middot;
+          RBAC &middot; Redis &middot; Docker</p>
+        <p class="resume-note" style="margin-top:.5rem">Open to SDE-1, backend developer, and backend internship roles
+          at MNC and product-based teams.</p>
+        <div class="resume-actions">
+          <a href="https://drive.google.com/file/d/1T0YS9v0wl1kxNNoDNqJNufBHkZyldqgP/view?usp=sharing" target="_blank" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download Resume
+          </a>
+          <a href="https://www.linkedin.com/in/asit14/" target="_blank" rel="noopener"
+            class="btn btn-secondary">&#x21D7; View on LinkedIn</a>
+          <a href="#" class="btn btn-secondary" data-panel="contact">&#x2709; Contact Me</a>
+        </div>
+        <div class="resume-meta">
+          <p>Links &amp; Profiles</p>
+          <div class="resume-links">
+            <a href="https://github.com/Asit-14" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+            <a href="https://leetcode.com/asit14" target="_blank" rel="noopener" class="btn btn-secondary">LeetCode</a>
+            <a href="https://www.geeksforgeeks.org/profile/asit14" target="_blank" rel="noopener"
+              class="btn btn-secondary">GFG</a>
+            <a href="https://www.hackerrank.com/profile/asit_14" target="_blank" rel="noopener"
+              class="btn btn-secondary">HackerRank</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="js/graph.js"></script>
+  <script src="js/panels.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

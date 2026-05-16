@@ -13,9 +13,11 @@
         var elements = [
             { el: document.querySelector('.hero-greeting'), delay: 100 },
             { el: document.querySelector('.hero-name'), delay: 300 },
-            { el: document.querySelector('.hero-role'), delay: 550 },
-            { el: document.querySelector('.hero-desc'), delay: 750 },
-            { el: document.querySelector('.hero-cta-group'), delay: 950 }
+            { el: document.querySelector('.hero-role'), delay: 520 },
+            { el: document.querySelector('.hero-desc'), delay: 700 },
+            { el: document.querySelector('.hero-badges'), delay: 860 },
+            { el: document.querySelector('.hero-cta-group'), delay: 1000 },
+            { el: document.querySelector('.hero-links'), delay: 1150 }
         ];
 
         elements.forEach(function (item) {
@@ -73,12 +75,18 @@
         if (!textEl) return;
 
         var phrases = [
-            'Designing Secure APIs',
-            'Optimizing Database Queries',
-            'Building Scalable Systems',
-            'Architecting Microservices',
-            'Crafting Clean Code'
+            'Designing FastAPI Services',
+            'Optimizing PostgreSQL Indexes',
+            'Building Secure JWT Auth',
+            'Scaling Real-Time APIs',
+            'Caching with Redis'
         ];
+
+        if (prefersReducedMotion) {
+            textEl.textContent = phrases[0];
+            if (cursorEl) cursorEl.style.opacity = '0';
+            return;
+        }
 
         var phraseIndex = 0;
         var charIndex = 0;

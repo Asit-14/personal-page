@@ -1,6 +1,6 @@
 /* ==========================================================================
-   NAVBAR — Premium Floating Glassmorphism Navigation
-   Unique, warm, backend-engineer aesthetic. Not template-like.
+    NAVBAR — Premium Floating Glassmorphism Navigation
+    Modern, dark backend-engineer aesthetic. Not template-like.
    Features: glass blur, height shrink, golden progress bar,
    center-expanding underline, animated active dot, status indicator
    ========================================================================== */
@@ -26,22 +26,31 @@
     width: 100%;
     z-index: 1000;
     background: transparent;
+    border-bottom: 1px solid transparent;
     transition:
         background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
         box-shadow 0.35s ease,
-        border-color 0.35s ease;
-    border-bottom: 1px solid transparent;
+        border-color 0.35s ease,
+        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.35s ease;
+}
+
+/* Hide navbar when a dialog panel is open */
+.navbar--hidden {
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* Scrolled State — Glass Effect */
 .navbar.scrolled {
-    background: rgba(250, 246, 238, 0.72);
-    backdrop-filter: blur(20px) saturate(1.2);
-    -webkit-backdrop-filter: blur(20px) saturate(1.2);
-    border-bottom-color: rgba(228, 179, 99, 0.15);
+    background: rgba(11, 15, 20, 0.82);
+    backdrop-filter: blur(18px) saturate(1.1);
+    -webkit-backdrop-filter: blur(18px) saturate(1.1);
+    border-bottom-color: rgba(61, 220, 151, 0.18);
     box-shadow:
-        0 1px 0 rgba(228, 179, 99, 0.08),
-        0 4px 24px rgba(62, 44, 35, 0.05);
+        0 1px 0 rgba(61, 220, 151, 0.12),
+        0 8px 28px rgba(2, 6, 12, 0.45);
 }
 
 /* Shrink on scroll */
@@ -134,10 +143,10 @@
 
 @keyframes statusPulse {
     0%, 100% {
-        box-shadow: 0 0 0 0 rgba(107, 143, 94, 0.4);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
     }
     50% {
-        box-shadow: 0 0 0 4px rgba(107, 143, 94, 0);
+        box-shadow: 0 0 0 4px rgba(34, 197, 94, 0);
     }
 }
 
@@ -152,7 +161,7 @@
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.4rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -161,7 +170,7 @@
 .nav-link {
     text-decoration: none;
     color: var(--text-muted);
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     font-weight: 500;
     letter-spacing: 0.02em;
     position: relative;
@@ -211,7 +220,7 @@
     bottom: -8px;
     border-radius: 50%;
     background: var(--wheat);
-    box-shadow: 0 0 6px rgba(228, 179, 99, 0.4);
+    box-shadow: 0 0 8px rgba(61, 220, 151, 0.45);
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -250,7 +259,7 @@
     transition:
         transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
         box-shadow 0.25s ease;
-    box-shadow: 0 2px 12px rgba(228, 179, 99, 0.25);
+    box-shadow: 0 4px 16px rgba(61, 220, 151, 0.28);
     min-height: 44px;
     display: inline-flex;
     align-items: center;
@@ -259,12 +268,12 @@
 
 .btn-build:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(228, 179, 99, 0.4);
+    box-shadow: 0 10px 30px rgba(61, 220, 151, 0.35);
 }
 
 .btn-build:active {
     transform: translateY(0) scale(0.97);
-    box-shadow: 0 2px 8px rgba(228, 179, 99, 0.3);
+    box-shadow: 0 2px 10px rgba(61, 220, 151, 0.3);
 }
 
 .btn-build:focus-visible {
@@ -310,7 +319,7 @@
 }
 
 .hamburger:hover {
-    background: rgba(228, 179, 99, 0.08);
+    background: rgba(61, 220, 151, 0.08);
 }
 
 .hamburger:focus-visible {
@@ -353,11 +362,11 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(250, 246, 238, 0.97);
+    background: rgba(11, 15, 20, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(228, 179, 99, 0.12);
-    box-shadow: 0 8px 32px rgba(62, 44, 35, 0.08);
+    border-bottom: 1px solid rgba(61, 220, 151, 0.2);
+    box-shadow: 0 10px 32px rgba(2, 6, 12, 0.45);
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -368,7 +377,7 @@
 }
 
 .mobile-panel.open {
-    max-height: 480px;
+    max-height: 560px;
     opacity: 1;
 }
 
@@ -417,6 +426,9 @@
 .mobile-panel.open .mobile-links li:nth-child(3) .mobile-link { animation-delay: 0.12s; }
 .mobile-panel.open .mobile-links li:nth-child(4) .mobile-link { animation-delay: 0.16s; }
 .mobile-panel.open .mobile-links li:nth-child(5) .mobile-link { animation-delay: 0.20s; }
+.mobile-panel.open .mobile-links li:nth-child(6) .mobile-link { animation-delay: 0.24s; }
+.mobile-panel.open .mobile-links li:nth-child(7) .mobile-link { animation-delay: 0.28s; }
+.mobile-panel.open .mobile-links li:nth-child(8) .mobile-link { animation-delay: 0.32s; }
 
 @keyframes mobileStagger {
     from {
@@ -431,7 +443,7 @@
 
 .mobile-link:hover,
 .mobile-link:focus-visible {
-    background: rgba(228, 179, 99, 0.08);
+    background: rgba(61, 220, 151, 0.08);
     color: var(--text-primary);
 }
 
@@ -456,7 +468,7 @@
     text-align: center;
     color: #fff;
     background: linear-gradient(135deg, var(--wheat) 0%, var(--amber) 100%);
-    box-shadow: 0 2px 12px rgba(228, 179, 99, 0.25);
+    box-shadow: 0 4px 16px rgba(61, 220, 151, 0.28);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     min-height: 48px;
     display: flex;
@@ -468,12 +480,12 @@
 
 .mobile-panel.open .mobile-cta {
     animation: mobileStagger 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    animation-delay: 0.26s;
+    animation-delay: 0.36s;
 }
 
 .mobile-cta:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 20px rgba(228, 179, 99, 0.4);
+    box-shadow: 0 8px 24px rgba(61, 220, 151, 0.35);
 }
 
 .mobile-cta:focus-visible {
@@ -486,11 +498,11 @@
 /* Tablet */
 @media (max-width: 968px) {
     .nav-links {
-        gap: 1.4rem;
+        gap: 1.1rem;
     }
 
     .nav-link {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
     }
 
     .navbar-inner {
