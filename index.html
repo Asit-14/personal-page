@@ -125,22 +125,28 @@
     <main id="main" tabindex="-1">
       <section class="hero container" id="home" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">
+          <p class="eyebrow" data-reveal>
             <span class="status-dot" aria-hidden="true"></span>Backend developer
             <span class="eyebrow-divider" aria-hidden="true">/</span> Delhi,
             India
           </p>
           <h1 id="hero-title">
-            Building the<br />backbone of<br /><span class="serif highlight"
-              >great products.</span
+            <span class="hero-line" data-reveal data-reveal-delay="70"
+              >Building the</span
+            >
+            <span class="hero-line" data-reveal data-reveal-delay="140"
+              >backbone of</span
+            >
+            <span class="hero-line" data-reveal data-reveal-delay="210"
+              ><span class="serif highlight">great products.</span></span
             >
           </h1>
-          <p class="hero-description">
+          <p class="hero-description" data-reveal data-reveal-delay="280">
             Hi, I’m <strong>Asit Kumar.</strong> I turn complex requirements
             into clear APIs, reliable services, and real-time experiences.
             Thoughtfully built, from the inside out.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions" data-reveal data-reveal-delay="350">
             <a class="button button-dark" href="#work"
               >Explore my work <span aria-hidden="true">↘</span></a
             >
@@ -160,7 +166,7 @@
                 <path d="M14 3v6h5M8 13h8M8 17h5" /></svg
             ></a>
           </div>
-          <div class="hero-socials">
+          <div class="hero-socials" data-reveal data-reveal-delay="400">
             <span>Find me on</span
             ><a
               href="https://github.com/Asit-14"
@@ -175,7 +181,7 @@
             >
           </div>
         </div>
-        <div class="hero-visual">
+        <div class="hero-visual" data-reveal="portrait" data-reveal-delay="160">
           <div class="portrait-backdrop" aria-hidden="true">
             <span class="backdrop-cross cross-one">+</span
             ><span class="backdrop-cross cross-two">+</span>
@@ -226,7 +232,7 @@
             >a little beyond the keyboard</span
           >
         </div>
-        <div class="hero-footer">
+        <div class="hero-footer" data-reveal data-reveal-delay="420">
           <span>Currently building at <strong>Knowledge Excel</strong></span
           ><a href="#work"
             >A little scroll, a lot to explore
@@ -249,7 +255,7 @@
         </div>
       </div>
       <section class="section container" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <div>
             <p class="eyebrow section-label"><span>01</span> Selected work</p>
             <h2 id="work-title">
@@ -264,7 +270,7 @@
           </p>
         </div>
         <div class="projects-grid">
-          <article class="project-card">
+          <article class="project-card" data-reveal>
             <div class="project-visual food-visual" aria-hidden="true">
               <div class="visual-topline">
                 <span><span class="tiny-mark">↗</span> foodbridge</span
@@ -368,7 +374,7 @@
               </div>
             </div>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="100">
             <div class="project-visual chat-visual" aria-hidden="true">
               <div class="visual-topline">
                 <span
@@ -473,7 +479,7 @@
         aria-labelledby="experience-title"
       >
         <div class="container experience-layout">
-          <div class="experience-intro">
+          <div class="experience-intro" data-reveal>
             <p class="eyebrow section-label">
               <span>02</span> The journey so far
             </p>
@@ -489,7 +495,7 @@
             >
           </div>
           <div class="experience-list">
-            <article class="experience-item">
+            <article class="experience-item" data-reveal>
               <div class="experience-meta">
                 <span class="role-date"
                   ><time datetime="2026-03">Mar 2026</time> — Present</span
@@ -522,7 +528,7 @@
                 <span>·</span> AWS S3 <span>·</span> RAG
               </div>
             </article>
-            <article class="experience-item">
+            <article class="experience-item" data-reveal>
               <div class="experience-meta">
                 <span class="role-date"
                   ><time datetime="2025-12">Dec 2025</time> —
@@ -562,7 +568,7 @@
         aria-labelledby="about-title"
       >
         <div class="about-intro">
-          <div>
+          <div data-reveal>
             <p class="eyebrow section-label">
               <span>03</span> A little about me
             </p>
@@ -570,7 +576,7 @@
               Curious mind.<br /><span class="serif">Practical approach.</span>
             </h2>
           </div>
-          <div class="about-copy">
+          <div class="about-copy" data-reveal data-reveal-delay="90">
             <p>
               I’m a backend developer based in Delhi, working with Python and
               Node.js to build the systems behind everyday experiences.
@@ -592,7 +598,7 @@
           <span>Always learning. Always refining.</span>
         </div>
         <div class="skills-grid">
-          <div class="skill-group">
+          <div class="skill-group" data-reveal>
             <span class="skill-number">01 /</span>
             <h4>Languages &amp; backend</h4>
             <p>
@@ -600,7 +606,7 @@
               Express.js, RESTful APIs, MVC
             </p>
           </div>
-          <div class="skill-group">
+          <div class="skill-group" data-reveal data-reveal-delay="60">
             <span class="skill-number">02 /</span>
             <h4>Data &amp; performance</h4>
             <p>
@@ -608,7 +614,7 @@
               optimization, indexing
             </p>
           </div>
-          <div class="skill-group">
+          <div class="skill-group" data-reveal data-reveal-delay="120">
             <span class="skill-number">03 /</span>
             <h4>Security &amp; delivery</h4>
             <p>
@@ -616,7 +622,7 @@
               CI/CD, Postman
             </p>
           </div>
-          <div class="skill-group">
+          <div class="skill-group" data-reveal data-reveal-delay="180">
             <span class="skill-number">04 /</span>
             <h4>AI &amp; exploration</h4>
             <p>
@@ -626,7 +632,7 @@
           </div>
         </div>
         <div class="learning-row">
-          <div class="education-card">
+          <div class="education-card" data-reveal>
             <span class="education-icon" aria-hidden="true"
               ><svg
                 viewBox="0 0 24 24"
@@ -647,7 +653,7 @@
               >
             </div>
           </div>
-          <div class="practice-card">
+          <div class="practice-card" data-reveal data-reveal-delay="90">
             <p class="eyebrow">A habit of problem solving</p>
             <a
               href="https://leetcode.com/asit14/"
@@ -690,14 +696,14 @@
         aria-labelledby="contact-title"
       >
         <div class="container contact-inner">
-          <div class="contact-top">
+          <div class="contact-top" data-reveal>
             <p class="eyebrow section-label"><span>04</span> What’s next?</p>
             <p class="availability">
               <span class="status-dot" aria-hidden="true"></span>Open to backend
               opportunities
             </p>
           </div>
-          <h2 id="contact-title">
+          <h2 id="contact-title" data-reveal>
             Good things start<br />with a
             <span class="serif">conversation.</span
             ><svg
@@ -711,12 +717,12 @@
               <path d="M40 0v80M0 40h80M12 12l56 56M12 68l56-56" />
             </svg>
           </h2>
-          <p class="contact-description">
+          <p class="contact-description" data-reveal data-reveal-delay="80">
             Have a role in mind, a project to discuss, or just want to say
             hello?<br class="desktop-break" />
             I’d love to hear from you.
           </p>
-          <div class="contact-actions">
+          <div class="contact-actions" data-reveal data-reveal-delay="140">
             <a class="button button-dark" href="mailto:asitshakya789@gmail.com"
               >Let’s talk <span aria-hidden="true">↗</span></a
             ><a class="contact-email" href="mailto:asitshakya789@gmail.com"
@@ -772,9 +778,32 @@
         © <span data-year>2026</span> Asit Kumar. Built with care &amp;
         curiosity.
       </p>
-      <a class="back-top" href="#home"
-        >Back to top <span aria-hidden="true">↑</span></a
-      >
+      <div class="footer-controls">
+        <button
+          class="motion-toggle"
+          type="button"
+          data-motion-toggle
+          aria-pressed="true"
+          hidden
+        >
+          <svg
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
+            <path
+              d="M3 7v6M7.5 4v12M12 6v8M16.5 8v4"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span>Motion <span data-motion-label aria-hidden="true">on</span></span>
+        </button>
+        <a class="back-top" href="#home"
+          >Back to top <span aria-hidden="true">↑</span></a
+        >
+      </div>
     </footer>
     <div
       class="toast"
