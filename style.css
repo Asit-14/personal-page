@@ -982,12 +982,43 @@ h2 {
 .experience-intro > .text-link {
   font-size: 12px;
 }
-.experience-item {
+.experience-item + .experience-item {
+  margin-top: 32px;
+  padding-top: 30px;
+  border-top: 1px solid #dcdfd2;
+}
+.experience-company {
+  margin-bottom: 24px;
+}
+.experience-company h3 {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+}
+.experience-company h3 a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+.experience-company h3 a span {
+  margin-left: 5px;
+  color: var(--muted);
+  font-size: 15px;
+}
+.experience-company > p {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.experience-roles {
+  margin-left: 4px;
+}
+.experience-role {
   position: relative;
-  padding: 0 0 34px 28px;
+  padding: 0 0 32px 24px;
   border-left: 1px solid #d6d9ca;
 }
-.experience-item::before {
+.experience-role::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -998,57 +1029,45 @@ h2 {
   border: 2px solid #f4f4ec;
   background: #89937b;
 }
-.experience-item:first-child::before {
+.experience-role-current::before {
   background: #627749;
   outline: 4px solid #e6eada;
 }
-.experience-item:last-child {
-  padding-top: 29px;
+.experience-role:last-child {
   padding-bottom: 0;
-}
-.experience-item:last-child::before {
-  top: 35px;
-}
-.experience-item + .experience-item::after {
-  position: absolute;
-  top: 0;
-  left: 28px;
-  right: 0;
-  height: 1px;
-  background: #dcdfd2;
-  content: "";
 }
 .experience-meta {
   display: flex;
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  font-size: 10px;
+  font-size: 11px;
 }
-.role-date {
+.experience-section .role-date {
   color: var(--muted);
 }
-.current-badge {
+.experience-section .current-badge {
   padding: 2px 9px;
   border: 1px solid #d5debf;
   border-radius: 3px;
   background: #e7edd8;
   color: #536441;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 1.8;
 }
-.experience-item h3 {
-  margin-block: 13px 8px;
-  font-size: 22px;
+.experience-role h4 {
+  margin-block: 10px 7px;
+  font-size: 19px;
   font-weight: 500;
-  letter-spacing: -0.4px;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
 }
-.company {
-  font-size: 13px;
-}
-.company span {
+.experience-section .role-arrangement {
   color: var(--muted);
-  white-space: nowrap;
+  font-size: 12px;
+}
+.experience-section .role-arrangement span {
+  margin-inline: 5px;
 }
 .experience-item ul {
   margin-block: 18px;
@@ -1072,7 +1091,7 @@ h2 {
   gap: 8px;
   flex-wrap: wrap;
   color: #606655;
-  font-size: 10px;
+  font-size: 11px;
 }
 .experience-tech span {
   color: #a4a896;
@@ -2017,14 +2036,11 @@ h2 {
     max-width: 360px;
     margin-block: 17px 10px;
   }
-  .experience-list {
-    padding-left: 5px;
+  .experience-company h3 {
+    font-size: 20px;
   }
-  .experience-item {
-    padding-left: 24px;
-  }
-  .experience-item h3 {
-    font-size: 21px;
+  .experience-role {
+    padding-left: 20px;
   }
   .about-intro {
     grid-template-columns: 1fr;
@@ -2508,13 +2524,14 @@ html[data-motion="reduced"] .project-card:hover {
     padding: 0;
   }
   .resume-header {
-    padding-bottom: 8pt;
+    padding-bottom: 6pt;
   }
   .resume-header h1 {
     font-size: 25pt;
   }
   .resume-header > p {
-    display: none;
+    margin-top: 3pt;
+    font-size: 9pt;
   }
   .resume-contact {
     font-size: 8pt;
@@ -2522,17 +2539,17 @@ html[data-motion="reduced"] .project-card:hover {
     margin-top: 6pt;
   }
   .resume-page section {
-    margin-top: 6pt;
+    margin-top: 5pt;
   }
   .resume-page h2 {
     font-size: 8.5pt;
     padding-bottom: 3pt;
-    margin-bottom: 5pt;
+    margin-bottom: 4pt;
     break-after: avoid;
   }
   .resume-page h3 {
     font-size: 9pt;
-    margin-top: 4pt;
+    margin-top: 3pt;
     margin-bottom: 2pt;
     break-after: avoid;
   }
